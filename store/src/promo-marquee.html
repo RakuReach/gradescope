@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<style>
+  body { width: 1400px; height: 560px; background: linear-gradient(120deg, var(--teal) 0%, var(--teal-dark) 100%); color: #fff; }
+  .wrap { display: flex; align-items: center; height: 100%; padding: 0 72px; gap: 56px; }
+  .left { flex: 1; }
+  .top { display: flex; align-items: center; gap: 20px; }
+  .top img { width: 96px; height: 96px; }
+  .title { font-size: 76px; font-weight: 800; letter-spacing: -1px; }
+  .tag { margin: 14px 0 28px; font-size: 28px; color: var(--gold); }
+  .memes { display: flex; gap: 12px; }
+  .memes img { width: 80px; height: 80px; object-fit: cover; border-radius: 6px; }
+  .cards { display: flex; flex-direction: column; gap: 22px; }
+  .cards .card { width: 400px; color: var(--ink); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+  .cards .card:nth-child(2) { margin-left: 60px; }
+</style>
+<div class="wrap">
+  <div class="left">
+    <div class="top"><img src="../../icons/icon128.png" alt=""><div class="title">Gradescope+</div></div>
+    <div class="tag">Know what's due next. See your grade as a meme.</div>
+    <div class="memes">
+      <img src="../../images/tier1.png"><img src="../../images/tier2.png"><img src="../../images/tier4.png"><img src="../../images/tier6.png"><img src="../../images/tier8.png"><img src="../../images/tier10.png"><img src="../../images/tier12.png">
+    </div>
+  </div>
+  <div class="cards" data-cards='[
+    ["CSCI 0150","Introduction to Object-Oriented Programming","2 days 12 hours",1,18],
+    ["PHYS 0070","Analytical Mechanics","5 hours 20 minutes",10,7]]'></div>
+</div>
+<script src="cards.js"></script>

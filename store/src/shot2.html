@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<div class="shot">
+  <div class="caption">
+    <h1>See your grade in one click</h1>
+    <p>Total points across every graded assignment, with a full breakdown.</p>
+  </div>
+  <div class="window">
+    <div class="dash">
+      <h2>Student Courses</h2>
+      <div class="term">Fall 2026</div>
+      <div class="row" data-cards='[
+        ["CSCI 0150","Introduction to Object-Oriented Programming","2 days 12 hours",1,18],
+        ["MATH 0520","Linear Algebra","1 week 1 hour",5,11],
+        ["PHYS 0070","Analytical Mechanics","5 hours 20 minutes",10,7]]'></div>
+      <div class="term">Spring 2026</div>
+      <div class="row" data-cards='[
+        ["ECON 0110","Principles of Economics",null,3,14],
+        ["CSCI 0200","Program Design with Data Structures",null,2,22],
+        ["APMA 1650","Statistical Inference I",null,7,9]]'></div>
+    </div>
+    <div class="overlay">
+      <div class="modal">
+        <header><h3>MATH 0520</h3><span class="x">×</span></header>
+        <div class="summary">
+          <img src="../../images/tier5.png" alt="">
+          <div><div class="big">91.0%</div><div class="muted">147.5 / 162 points across 6 graded</div></div>
+        </div>
+        <table>
+          <thead><tr><th>Assignment</th><th class="n">Score</th><th class="n">%</th></tr></thead>
+          <tbody>
+            <tr><td><a>Midterm Exam</a></td><td class="n">83 / 92</td><td class="n">90.2%</td></tr>
+            <tr><td><a>Quiz 2</a></td><td class="n">19 / 20</td><td class="n">95.0%</td></tr>
+            <tr><td><a>Homework 3</a></td><td class="n">9.5 / 10</td><td class="n">95.0%</td></tr>
+            <tr><td><a>Quiz 1</a></td><td class="n">17 / 20</td><td class="n">85.0%</td></tr>
+            <tr><td><a>Homework 2</a></td><td class="n">9 / 10</td><td class="n">90.0%</td></tr>
+            <tr><td><a>Homework 1</a></td><td class="n">10 / 10</td><td class="n">100.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="cards.js"></script>

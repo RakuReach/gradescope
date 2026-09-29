@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap");
+
+:root {
+  --teal: #1a5059;
+  --teal-dark: #123a41;
+  --gold: #efe3a4;
+  --purple: #5b2a86;
+  --ink: #212121;
+  --muted: #5f5f5f;
+  --card: #f3f3f3;
+  --page: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Noto Sans", "Open Sans", Arial, sans-serif;
+  color: var(--ink);
+}
+
+/* ---------- Mock Gradescope course card (mirrors content.css) ---------- */
+
+.card {
+  position: relative;
+  width: 340px;
+  min-height: 196px;
+  padding: 16px 16px 52px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background: var(--card);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 4px;
+  padding-right: 100px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card .name {
+  padding-right: 100px;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.card .info {
+  margin-top: 6px;
+  padding-right: 100px;
+  font-size: 15px;
+}
+
+.card mark {
+  display: inline-block;
+  padding: 0 3px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--gold);
+}
+
+.card mark.none {
+  padding: 0;
+  font-weight: 400;
+  color: #555;
+  background: transparent;
+}
+
+.card img {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+}
+
+.card .bar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 0 0 5px 5px;
+  font-size: 15px;
+  color: #fff;
+  background: var(--teal);
+}
+
+.card .bar button {
+  padding: 3px 12px;
+  border: 0;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 14px;
+  color: #fff;
+  background: var(--purple);
+}
+
+/* ---------- Mock dashboard page ---------- */
+
+.dash {
+  padding: 28px 36px;
+  background: var(--page);
+}
+
+.dash h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dash .term {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.dash .row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+/* ---------- Screenshot frame ---------- */
+
+.shot {
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  height: 800px;
+  background: var(--teal);
+}
+
+.shot .caption {
+  padding: 34px 48px 26px;
+  color: #fff;
+}
+
+.shot .caption h1 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.shot .caption p {
+  margin: 6px 0 0;
+  font-size: 21px;
+  color: var(--gold);
+}
+
+.shot .card { width: 354px; }
+
+.shot .window {
+  position: relative;
+  flex: 1;
+  margin: 0 48px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background: var(--page);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Grade modal (mirrors content.css) ---------- */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal {
+  width: 560px;
+  padding: 20px 24px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.modal h3 { margin: 0; font-size: 20px; }
+.modal .x { font-size: 26px; color: #555; }
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.summary img { width: 84px; height: 84px; object-fit: cover; }
+.big { font-size: 32px; font-weight: 700; }
+.muted { font-size: 14px; color: #666; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid #e5e5e5; text-align: left; }
+th { font-weight: 600; background: #f3f3f3; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+td a { color: #1a5fb4; }

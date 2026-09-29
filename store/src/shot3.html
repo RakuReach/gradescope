@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<style>
+  .ladder { display: grid; grid-template-columns: repeat(7, 1fr); align-content: center; gap: 30px 18px; height: 100%; padding: 0 40px; }
+  .ladder figure { margin: 0; text-align: center; }
+  .ladder img { width: 146px; height: 146px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+  .ladder figcaption { margin-top: 8px; font-size: 18px; font-weight: 700; }
+</style>
+<div class="shot">
+  <div class="caption">
+    <h1>Your grade, as a meme</h1>
+    <p>13 tiers, from sunglasses at the top to pure despair at the bottom.</p>
+  </div>
+  <div class="window">
+    <div class="ladder" id="ladder"></div>
+  </div>
+</div>
+<script>
+  const bands = ["≥ 99%","≥ 97%","≥ 95%","≥ 93%","≥ 90%","≥ 85%","≥ 80%","≥ 75%","≥ 70%","≥ 65%","≥ 60%","≥ 50%","< 50%"];
+  document.getElementById("ladder").innerHTML = bands.map((b, i) =>
+    `<figure><img src="../../images/tier${i + 1}.png" alt=""><figcaption>${b}</figcaption></figure>`).join("");
+</script>

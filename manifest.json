@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Gradescope+",
+  "version": "1.0.0",
+  "description": "See what's due next on every Gradescope course card, plus your grade as a meme.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.gradescope.com/",
+        "https://www.gradescope.com/account*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/*.png"
+      ],
+      "matches": [
+        "https://www.gradescope.com/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
