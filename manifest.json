@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Gradescope+",
-  "version": "1.0.0",
-  "description": "See what's due next on every Gradescope course card, plus your grade as a meme.",
+  "name": "Gradescope+ : Due Date Countdown & Grade Calculator",
+  "version": "1.0.1",
+  "description": "Track upcoming Gradescope assignment deadlines and calculate your course grade right on the dashboard. Plus a grade meme.",
   "permissions": [
     "storage"
   ],

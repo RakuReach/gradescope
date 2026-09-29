@@ -3,22 +3,30 @@
 Build with `scripts/package.sh`, then upload `dist/gradescope-plus-<version>.zip`.
 
 ## Store listing
-- **Name:** Gradescope+
+- **Name (from manifest):** Gradescope+ : Due Date Countdown & Grade Calculator
 - **Category:** Education (Tools)
 - **Language:** English
-- **Summary:** See what's due next on every Gradescope course card, plus your grade as a meme.
+- **Summary (from manifest):** Track upcoming Gradescope assignment deadlines and calculate your course grade right on the dashboard. Plus a grade meme.
 - **Description:**
 
-  See what's due next without opening every course.
+  Gradescope+ adds a due date countdown and grade calculator to your Gradescope dashboard. See your next assignment deadline and estimated course grade for every class without opening each course.
 
   On your Gradescope dashboard, each student course card shows:
   • Next assignment: a countdown to the earliest assignment you haven't submitted
   • A meme picture that changes with your grade in the course
   • A "See Grade" button with your total percentage and a score breakdown for each assignment
 
-  The grade is total points earned divided by total points possible across graded assignments. It is an estimate, not your official course grade.
+  Who it's for: college students who use Gradescope for homework, exams and projects and want to track deadlines and grades in one place.
 
-  All data stays in your browser. Nothing is sent anywhere.
+  FAQ
+  How is my grade calculated?
+  Total points earned divided by total points possible across graded assignments. It is an estimate, not your official course grade.
+
+  Does it send my grades anywhere?
+  No. All data stays in your browser. Nothing is sent anywhere.
+
+  Which pages does it run on?
+  Only the Gradescope dashboard (gradescope.com).
 
   Not affiliated with Gradescope or Turnitin.
 

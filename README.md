@@ -1,5 +1,7 @@
 # Gradescope+
 
+[![Available in the Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Add_to_Chrome-4285F4?logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/gradescope+/mjkmoobnhoggnmcaicplhbdfoakdcnkh)
+
 Chrome extension that adds to each **Student Courses** card on the Gradescope dashboard:
 
 - **Next assignment:** countdown to the earliest unsubmitted assignment that is not yet past its regular due date.
@@ -15,6 +17,8 @@ Course pages are fetched in the background and cached for 10 minutes. Countdowns
 </p>
 
 ## Install
+
+Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/gradescope+/mjkmoobnhoggnmcaicplhbdfoakdcnkh), or load it unpacked:
 
 1. Open `chrome://extensions` and turn on **Developer mode**.
 2. Click **Load unpacked** and select this folder.
