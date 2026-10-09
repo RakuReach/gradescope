@@ -1,0 +1,446 @@
+{
+  "abdn-px1015-catalogue": {
+    "sha256": "64dd5f3d9737ea4f614c8fa0c0802f7176e19aae3742a755e1dfd0b8f8c094e5",
+    "text_sha256": "2ded4d90c6c834071f15e1b80bdea95f79bc01f17eb1e17abc71912f0a20af67"
+  },
+  "acadia-chem1013": {
+    "sha256": "3fa373d49c66faca2a8926f50081fb11159b26f98e9d69b228cf8b7285bb27ac",
+    "text_sha256": "c9dc45f95319095d824862c55bce178c59583caaeeabcccf67ae57edf0c7c37a"
+  },
+  "anokaramsey-chem2062": {
+    "sha256": "67da378766a2fa60f2c3601b68f3a7dcf747dc475b2354dd45e36461fb3fab69",
+    "text_sha256": "172c3747a187c2c04b0d6b1e3573cf395ef47a9f785e3fb5c90a754ed2322106"
+  },
+  "athabasca-engl177-syllabus": {
+    "sha256": "bd37e4a9e7debec5ea250fa65d3fec883fb70f4ae7f1db1b9f4a4a0eb8804cab",
+    "text_sha256": "02a9d99431c225c46cd688f5f4c74d1a6e9963ce73c493c6dbd56fd5fbd6bed8"
+  },
+  "auckland-phys120": {
+    "sha256": "114abe7710da49dbe73f1c984d96c30f1caa34640cbef8b80ec109fda851b6d6",
+    "text_sha256": "dc521a9c9863716a2177a8ebd80e7e0e462cc9d6e54661d084dcc368445b8d8c"
+  },
+  "austincc-chem1312-syllabus": {
+    "sha256": "18876301e25e67c2b7287e702ffcb3fea8f273993a1157433b33456b414feedf",
+    "text_sha256": "0ee3cc571e8cf65285e415ab8b1230d1e3b1dd07e758c1aad4fed52ad58f219d"
+  },
+  "bates-bio140": {
+    "sha256": "4f9ce2df59482c0cdd841726c9a33e0a08dea69a5f79e42d0cef3c636ee11e99",
+    "text_sha256": "4bddcc76f952661f751fdde089d00f3fdaa45436dcf1669587a9f0bc1b2db57d"
+  },
+  "binghamton-math148-syllabus": {
+    "sha256": "7611acf24a8b3ac0ecf4e28e3ed1d4771f9387f540b221ad43c7bd4c917ba020",
+    "text_sha256": "93735e33102033824599fe63e2a613fdae2f1732c3b776bc7b965bbe0979cd7b"
+  },
+  "brown-cs1600": {
+    "sha256": "0e5083804c13312ceb9c332c7ca279b7f6e87d929b57eb443b53369c7304a9dd",
+    "text_sha256": "1209a539556e926a964b1b36273eaa8eef66c9824ca60be3710950f00db40b2d"
+  },
+  "chemeketa-gs104-gsite": {
+    "sha256": "5780d312ca7af701b0942e497ad6bd13c9dfd24885bbf73c162b0499fd6b2db7",
+    "text_sha256": "47018097576d59eb2aa7c090776b45cfbc4a5ae2b67e4dcfb20d3fbb17e2a0a3"
+  },
+  "citytech-mat1275": {
+    "sha256": "ef841efdb9796de72676f8f63819a7cd53548bc3647ce2b81cc585762760a85a",
+    "text_sha256": "692d14d0cc6ac85428371f9c47d11ecf0cfb6b45a42fc4e2e8215d55505916d3"
+  },
+  "cityu-ef5010": {
+    "sha256": "4cb57e6ff7d37dfbc7483a6306b38aaaa7318cb7f1245622fc22fed86b8fabc5",
+    "text_sha256": "ae6c7e52bc1b78cbf43e4dc56630fd3f88e78b15163009b65557cc3f88e1335a"
+  },
+  "colorado-csci3308": {
+    "sha256": "235e082cdaa7bb36ad7f5353273b0ee27b2aec5fcfed2747972282b55d81dc70",
+    "text_sha256": "dde3cec663187e8b74725497f621b03929839a8ea0e620e085aa454a592eed79"
+  },
+  "colostate-mech417": {
+    "sha256": "723f49e7e7f55f812b932c7090f97a8661c45c238280478e4c73d1b40c7cca54",
+    "text_sha256": "450d63fb19534e9376366aa05a75b86b16a4e77703056d3ac4baf095b1b2c7da"
+  },
+  "coquitlam-biol101": {
+    "sha256": "e25d2ade371a86ba02246e4775ef8802e5ce5e1f557a51f5c547e57052b20c33",
+    "text_sha256": "6d1d127ef3609837b2d5a32efc71f50a3951d3939659ce6cbe019a6ef93d9a8a"
+  },
+  "cuboulder-phys2010-canvas": {
+    "sha256": "c0e9dbbab37693bd94347608b9cfbd6851bc7e4feed9a93ccb77152528807cdf",
+    "text_sha256": "ad2905b921bec664bdccf2f1670e84c31c91158e37b2a0d66f0c05d6050acdcb"
+  },
+  "davidson-dig215-specs": {
+    "sha256": "17f738418ce8f341e54b83b648cdcc91deb8218d629980e1271a8f5a9bc9cbce",
+    "text_sha256": "496d1835bcf1aad21bbaf511372f2f5b21db3302cf9fef08c05bf5e383923e58"
+  },
+  "deanza-chem50": {
+    "sha256": "89cfd0e6166b429b622435a36fac07f1843f1e3d2988cba4ebaf380a17adf89a",
+    "text_sha256": "2a37ed89c0f49b6a24219991aaa83f1653cd99d366748e7f2894d7f7780b48fd"
+  },
+  "duke-math106l-grading": {
+    "sha256": "bed783380afb196e36770d4d19c681bf402d28976039427b07a431813c9dfc1c",
+    "text_sha256": "5ce4cf3a7527df5fc18e522e73f66cd42e31c375fe21f0ce175ddc2e48ad600a"
+  },
+  "edinburgh-phys08016": {
+    "sha256": "799d7fe6f8eb46a469d2de33af1eafc8b4935134643e419f0908ecfbe51b6ce3",
+    "text_sha256": "f3ca8e126ade06f9f1df9bc94f83c0ff5f5e824c04ce7e0b16c15ca38738fd3f"
+  },
+  "eur-intro-programming": {
+    "sha256": "d63dbefa54ab92ee32c81cf12ed34494b2a068dd91ecf90d11799051b308ba99",
+    "text_sha256": "376cfcd42f96fa084195ee1d64fb3f47f201304660b11d8fe39623246412d7cf"
+  },
+  "fsu-ids2681-gdoc": {
+    "sha256": "3ca32f67f906bedcbdc6ac7ca77c998bf6208c7fe1bf70d20dd2dd34058086ae",
+    "text_sha256": "b13cbc10d76799a952a02f5f32dfed2d3f9dd4e9be6e292b0f7cb1aeaf37f881"
+  },
+  "gatech-cs1331": {
+    "sha256": "daa5cf5c783a60522b7e7eb0166cf7d46baf560f7aac1ebcfeba704e8e9a8b64",
+    "text_sha256": "79f421803bf15f04eec168e0791cc30486aa27e8690740f8d505b64b20ca9699"
+  },
+  "glasgow-chem1": {
+    "sha256": "a6e166e6556f21537cb8b44cfd0e0a9024a58805e755f3e898b38cbe9334a7bc",
+    "text_sha256": "8660000eca8d44be00701c4ae099b1ff59da588d22b54118d26089109b22ec18"
+  },
+  "grinnell-engl224-assignments": {
+    "sha256": "43a362847b92037664e47e3682f3c724c3d7a519304c97f58e173239139f3e24",
+    "text_sha256": "00b73a0fea47fc56bf9cb0960325e008c3d14cf35f247c3f1dc66672d184b7fb"
+  },
+  "guelph-engg3490": {
+    "sha256": "8dbeb35af192c0f66ca0764788a05238af9ad6e3401775e1a773da00d12a21f5",
+    "text_sha256": "46477725408807c34fd283567d7fd19531913a4ea780770e71980beb70ebd947"
+  },
+  "gwu-ece2115-lab": {
+    "sha256": "3eec64282c4abe63b83eab7ec5a8624a17117a029ac18ab0677404ae6258d95c",
+    "text_sha256": "f485c7d7847f44e2e69254b0957cad7586456aa6d47ff976a204fef3c2da57c8"
+  },
+  "hamilton-phy105": {
+    "sha256": "5041b4d233133d93596fe73ce9721c0b60cfeaa47b8159d3d3100759c8b7e300",
+    "text_sha256": "4e66d0c1df2ab178ccf0e6e28989bf39816d87e630d14ff67303da42fb205125"
+  },
+  "harvard-ext-stat-e100-canvas": {
+    "sha256": "8685a39b21c9afca439cce4b5ae8ae4e26a64a9fb41ceae1611f6cb8fa7ab964",
+    "text_sha256": "b9c515ec19fed0838d8081f7f037486e4251c592ebb78e7f88971f5b5492b18c"
+  },
+  "hiroshima-generalchem-syllabus": {
+    "sha256": "d9698f170e93abbadd871c2ba95a9ee122eb91740043ab99393e908d770522c0",
+    "text_sha256": "48d2ddc890cf2c2b618648a4a809c63408b7e1e544d3a4a3bc1b2d62bb8751e5"
+  },
+  "hku-econ2255": {
+    "sha256": "fd8acd5d99196a91c07be0362963c36c8a99a1d36f4b17573a1b494a0085c65d",
+    "text_sha256": "5f6a3fab7b330973ff4aea61cbd55331b67839bac8e9b916624ecc88441833c0"
+  },
+  "hkust-math1005": {
+    "sha256": "8a9443ec347f4add3ca4b1d3d8a6103196eeb8840428e861e2dc2fad47a089bc",
+    "text_sha256": "6a38f889eef93aa3efc0f7ba75b2abd22fb8990602b65333717400225ce86bae"
+  },
+  "hkust-math2350-grading": {
+    "sha256": "ad18be03a0cece728eb824033f537cb5aed3fe36faacb71544af05308dcd70c4",
+    "text_sha256": "16a74dbe93eb30808ca098e4f3644cf00a812c6b43b4f45e1f8529ac3fafeec7"
+  },
+  "humboldt-chem109": {
+    "sha256": "6871f60a91df24ec57dcd210b86631ffe99ade984237c0fdaf8e313ce9436399",
+    "text_sha256": "b557e6b456befbbc14aed337bd8a5539b58940d5d35d28f487d18e06cf2a446e"
+  },
+  "hws-math130": {
+    "sha256": "a981d73fc8998b45c2a85dfdb9e84421be7baeb79c137b0cd2440167d543e7ec",
+    "text_sha256": "f7189b284fc1e1b61586d292581ee7738b2655a202214403f914134ee5d29095"
+  },
+  "iheid-econometrics-gsite": {
+    "sha256": "5d75c1f1e096278a9ae91f00d6d1b8087fafa45d46e5ffe7724d5d76cf70d761",
+    "text_sha256": "45e6cfbe85224255eeb8c2f3f27983ba077bb38ce7e5d691a0fd2e810457c402"
+  },
+  "iitk-mth102-evaluation": {
+    "sha256": "3004deaa097e461ec7d10e624d31915f001ce368945d9ec081c201f9f07bd376",
+    "text_sha256": "e0f98cb81192f9d61515ea07cee9cf98f77b92e672020119b4f320c09722d797"
+  },
+  "iitrpr-ma101": {
+    "sha256": "cc1dd3a0d6101b5b57242fa79c1ca5b6dfc97b3d715c3fcbe937e59c815429b4",
+    "text_sha256": "4a999abb2938a81344ef837d4e28627713ee78a7f8824f8d9880abfb41cd114e"
+  },
+  "illinois-phys427": {
+    "sha256": "af8e4a1f0fa4958475026ac09cebe77231f7c71d3761d2e3b345702105df1a09",
+    "text_sha256": "2eaa88facc520582d4d6d2b2bb6998d765c3b326ad584c7b071f4a516c44610f"
+  },
+  "iseg-ulisboa-econ1": {
+    "sha256": "4787c651e1a8cbb9990fca7ff074f7efbfab9eb5a5e37f7a69b45f1f03d337a7",
+    "text_sha256": "8d5be7feb69a7871c457e1aaa4dd4481e741166b9a7682fa422a054842e6884f"
+  },
+  "koc-mech206": {
+    "sha256": "100d932f6ecaba8326bc0dcfd8ae8fc9c28c515009190e240ecd4dd81756993b",
+    "text_sha256": "8d22483342695e01d52cdf07c17283775e9996f05ea6729774a71b0c3740c71f"
+  },
+  "ksu-phys113": {
+    "sha256": "8e7c40dffc0cbcb81a114c9a3a41169b158435903a585365fd73fbd31f1a5d94",
+    "text_sha256": "183e341386c7f54bd6386a5942281e96516aed168c887246faaab40bfafdca9a"
+  },
+  "kth-sf2729-examination": {
+    "sha256": "508681c4bbfe2a37f2ad4ad20f4c9ed67afa82f3946d9a182fac778befa7a948",
+    "text_sha256": "5a90ee82839167e9e123a6fa4fe0e76ea8f81138d4ae876b8f107f432aadeb82"
+  },
+  "ljubljana-stat-rules": {
+    "sha256": "0ef277390255c2406e6c762b91711c64a5a0bf347f99122201925ae97cfcb34f",
+    "text_sha256": "f7754bd7e192541cccc187c024f052e614ceaa015471f06b01f4d6413c4ca0a1"
+  },
+  "mccc-che100": {
+    "sha256": "1e427b8a3bbc655ea55ca77e7a64d65ee19e96c0c219e6bc1c2ff287b3835d34",
+    "text_sha256": "317ef68055649148785545ac6ede6d971377225a283d8fd72b72bf36d67088fe"
+  },
+  "mcgill-mimm384": {
+    "sha256": "7d6b6bf37695b03f0d154ed3284e46f97a22c9ea71711a59f0ce38cf1f50e7b4",
+    "text_sha256": "1b0984160d57c91e3c349ddcc2dac4e2809ffb042385aa1f47a98a1cf659f3fe"
+  },
+  "montgomery-math181-sbg": {
+    "sha256": "add6079c33f3a97dbd6be564f38289e6436fa0f54c8014e61d7385c8017f277d",
+    "text_sha256": "65b8087227da7ef11dcb26e56eeb84d3dc1e5dea3d02c274fdc51d6207586df9"
+  },
+  "mq-mech1001": {
+    "sha256": "3cdc01d95418449b4b409263a65c9c90449d6f016d2dc7288021a4ee22384677",
+    "text_sha256": "a251ba107c15f673fad943b2098e929d8f9164da74bdd1f511324f48945b7957"
+  },
+  "mst-math204": {
+    "sha256": "98ae76ecc448a2375f6bd9b105840db23f12f9380a7fed21488a8687e2774ddb",
+    "text_sha256": "450a35fa6076e744f5f3a468930aaad6f15c3876656b19570b0d76eef9869ead"
+  },
+  "msutexas-chem1241": {
+    "sha256": "3ee48d90f08a2a3d2950da297d5decebe60dbdae480435069391ef9b5872a836",
+    "text_sha256": "059009313493e37f3a4c8e0935e922062b3babc01cb2fd1685efc28981c682fa"
+  },
+  "mun-biol2250": {
+    "sha256": "aabfb957c9dcba58b1ccfd21e9cd767b7fc425919bf746cc879b2775963320f3",
+    "text_sha256": "ca25979a9ecfe2eb763c69e7b77f5d99328eb650f6cb86bf7ccbb87da1698b36"
+  },
+  "nagoya-chem-exercises1": {
+    "sha256": "a28bf42db36dcfd27feb8572740ca856218442b1000a497a324eb6c6f0073b21",
+    "text_sha256": "e36edb972651f43de7a829ebf578e69bab165ac9226f0d739a0acd1440afc785"
+  },
+  "nova-phy202-canvas": {
+    "sha256": "b83fb2f173ac311874651aaf407660bec3c53a935bccf1f3869a5900a845069d",
+    "text_sha256": "f4ec6bfb9f6f920e81c49fe6cb224545bde3e96c01c19487b27467057c752df0"
+  },
+  "ntu-econ-macro-48908": {
+    "sha256": "d2fdd501749b2982b1996a392e53d2cea2dfbc96d458cea604d6117f2d718b91",
+    "text_sha256": "3a252f059b95e5e9544f47206c3d01bb463be6416a627653e20bcc3eaab7421f"
+  },
+  "nus-uit2201": {
+    "sha256": "dd6e45a4852d9aa39237738dfce2df5e9d9b1cba461dc581f583836f3f563c31",
+    "text_sha256": "abb7da0d828e13c14a368fe6797486b2ed6c8f66b78aa891354e002865950e66"
+  },
+  "nyu-math-linalg-gdoc": {
+    "sha256": "15e348f873a30db24407cf05079794a03ea6eff3f95ccb422b60253999229497",
+    "text_sha256": "9309f7b87e820e8776f038b5f2db0c8e275d586931ebcca206bb81438f768990"
+  },
+  "pcc-mth95": {
+    "sha256": "564db0dde3224d24d68c06c831908a3e1b5564034d4aa6d924cfff210a358afd",
+    "text_sha256": "1fc01df94ebabf2744498fa182e788cdae94b22153811d234a547a226a535c37"
+  },
+  "psu-astro597": {
+    "sha256": "70243a569292fb0962f190051b9eca160d50026b84e2857f0a1632b51a6c546c",
+    "text_sha256": "d8d6decffef9e0a355fa755c6a89fcc1c587688a7ee1c249126cc76d7e558fa8"
+  },
+  "queens-chem397": {
+    "sha256": "043a4f1b5f64948e5f5a3af94de18d6aa9e0bff2ca426814129589848813e350",
+    "text_sha256": "de01a1474ec7ea5ccc5d329244cd45d5f9ff219c20fd5e0dcf870af7642b29b5"
+  },
+  "sdsu-math121": {
+    "sha256": "6c394d7ab4e2f18448e625bce50b78279bc050c854d087af62e8409db991e973",
+    "text_sha256": "be8b170e9087911cec2b031e0070d326d5709fb4dce050045309aa082ea6c787"
+  },
+  "seneca-edu105-outline": {
+    "sha256": "2b769b154a7aa55f736ef8ab11efdc7bc45170a5b9086fd4985a2c87115d244a",
+    "text_sha256": "933f0b9fe4d606ee7d3c027591ac6c4dcf9c55fab9b39f8b129d947ee29063ba"
+  },
+  "southplains-chem1406": {
+    "sha256": "0d9dad4fbaee28dfcc79c89185d151df91d8574e4c147076800d06b0c52b534c",
+    "text_sha256": "d473220e68271ab3221a9a8626582a281ea88ee1a38c68b475e40844b94a335a"
+  },
+  "standrews-ph1011": {
+    "sha256": "6ab59127a321f66645590a1c114929d2fc1a0ee7bba4cdda93b572d639376518",
+    "text_sha256": "d208a8120a2e4d1bf0b6145e21aeb321da30887a5d7844e03bea415303bce02a"
+  },
+  "stanford-symsys201": {
+    "sha256": "1a971de8283db775ef77a050bf82252a6f874a3febb26817a052ce9d07e3e466",
+    "text_sha256": "6c242928aa0d42c9b4363a50abb0908a44b71d9b3e108b2af9f29b3e0d698bd9"
+  },
+  "swarthmore-econ1": {
+    "sha256": "1339ab3a838975739e594541fae5e413c8cf4290c52ffa63f7d0a62e38649a99",
+    "text_sha256": "5c660c58e18169c7553f73ba92c746156c76e73e488ee7065442e833c2a52c91"
+  },
+  "tamu-chem120h": {
+    "sha256": "7c98268a4afb1ddb0cd2631988c11ca4cc71d48589afa48f8f6276f9a5fe3c9a",
+    "text_sha256": "4d1dba682d1eac21bb51e3c86866c122ec54546ae6f827b4f674ddefc1c854b8"
+  },
+  "tcd-mau11404": {
+    "sha256": "59738446736abc6f4bcb7f976d0d88e26dfdedcb0ad342d070a5796e07fd9089",
+    "text_sha256": "30634916016ec2e6c4e919d1ed2e08158a06855c5084be69af64a902c79a8ee2"
+  },
+  "uab-econ-policy-102468": {
+    "sha256": "bd5ed4cade8be6dd9ec0066f57e8bb759b3b33a067bc3d3fb7cad044a5089629",
+    "text_sha256": "f9c490a60a76ddf3384ca59b4dd65ae036420652b57f82e65b1d8c0e1495930f"
+  },
+  "uark-econorg-midterm-guide": {
+    "sha256": "ef20f9b29aef6d7e27b4e9d078a131b2341464126d5480d5b34f0f576ea7408d",
+    "text_sha256": "545a2507938f69810947b6962eaf083efcc034e464bd4492dd09e297ca98275f"
+  },
+  "ubc-math110": {
+    "sha256": "69af17217b60f80bd8dbfb411ecf552e5872f1e65d7288d8eebbe26a26507157",
+    "text_sha256": "a6e954d9c8191dfc67aede5bc42f69e841a0250738635e316b43f7ca142b7cbc"
+  },
+  "uca-chem1450": {
+    "sha256": "4dc61e2bd475b22c2fe2c7bcacd99b1116a8d7161c7403ae17db7c9ae079e064",
+    "text_sha256": "68061ad5f0986a2ede8ef689acc91024f08fd3dc07688c19fc41996313ea952e"
+  },
+  "ucdavis-lin131-canvas": {
+    "sha256": "9d9fd4b0ea2b7292d58eaa28c6db005cb4716e6d8edeed872114040bc50496f4",
+    "text_sha256": "ef7bdfa34da26859bacb6c1e31389e4a33fc478e8639f4bd417b28865783ba03"
+  },
+  "uci-psych56l-grading": {
+    "sha256": "faeaec74f22c97f13aa204e8253ab97bebf116aab32ed5bb0e92019411ededb8",
+    "text_sha256": "c490bc1f832afd1876b79ab266dab9a5ee1c2c476c04a706e57794c37830c447"
+  },
+  "ucmerced-chem10": {
+    "sha256": "c6b8547d772257f9349238f4c25b0e9d087f2195952d4f14d18fbb24aeaf0334",
+    "text_sha256": "9a5ccb16922aa9655676c324bdc9b03919ddb7f922c7638f146cc49cb4151d02"
+  },
+  "ucr-phys231-gsite": {
+    "sha256": "d4d8e399e478a740eca0de27c749c8a2f308f101cceeb7a24df042b1f817d1e7",
+    "text_sha256": "5276757656a6a1aedc07aa225c86a647688d45334feb7aa80826f283a3edff02"
+  },
+  "ucsb-phys22": {
+    "sha256": "4f46a6e9d2bb1eeb3a5e5f773ebaf4bcd858b0e257a3552ee97391f523f3320d",
+    "text_sha256": "d541b8792433c89ad5b23d375dfa06c46039a4703fb3fbd2bbd231ebadf67214"
+  },
+  "ucsd-cse8a-canvas": {
+    "sha256": "92b261e7ed88cabfe4cb7a6f2808907898b6bdc93cc61d1669b186b20d673a3b",
+    "text_sha256": "5e44feba1718fb71942c17b05b04679dfc739511a1325aca9a0f237bb3cf77e3"
+  },
+  "uct-phy1032s": {
+    "sha256": "c849256bb5ad8f7fe3ed4465699d3d66c7cb8aa72561c1a60b272444adf923da",
+    "text_sha256": "13f447dd12a71d93a0d69d73762898c7588cb5cc66c3b9840fd6e467a125c512"
+  },
+  "ufl-maa4211-grade-scales": {
+    "sha256": "54a9341eda084a488e7f6e7ec3b39c78fdbc7e06c874f118dc454de22237d1cd",
+    "text_sha256": "3c1bf670d2e57effee6f5ab36bc91eb40e3d8660f34422b79832c4f599bff739"
+  },
+  "uiowa-phys128": {
+    "sha256": "a1e32794f3658801061fd260d3f07484763958e2492afd0581a235769334a1d1",
+    "text_sha256": "f4f2141b94e370ca1b72378c3c78e31cf121993f924b35a0229cb61e2af93def"
+  },
+  "ukim-feit-german-descriptor": {
+    "sha256": "23996d21f81be2954cde4bc2eee5a895038c5e80f96aa149634649952841d56a",
+    "text_sha256": "7c2b664b48223b19f3c2feefcfeebf43afe401bab22267e669ee77197f3690df"
+  },
+  "um-malta-bio3080": {
+    "sha256": "ced23d761bb8a08955c58ce18b083d86b1ae217154e26c48c4fe9c62e3df9c60",
+    "text_sha256": "718e0dc7e51a34c775f296c44a43a1b4c40c15729c28488132f13569bc0d6a4b"
+  },
+  "umaine-ece417-gdoc": {
+    "sha256": "9205e74e8be38e749c48c1ba45cbf7c38a78968b19c56d5cf8ac9d3492cc0d81",
+    "text_sha256": "54dae8e756f307746b66b3355a98f6ef4f7660d911d938529ca2c03b4634280a"
+  },
+  "umd-astr430": {
+    "sha256": "973a4f6e723bd9f1a094e69b04b505210c816231f4b242e9ed5f6c5d1359f418",
+    "text_sha256": "f385fdd0db188617fb795721602ad8a90b399a9bd28b63c046491befbfee1d34"
+  },
+  "unimelb-actl30004": {
+    "sha256": "62461af07fc0c694f4d36dc7ac7ea0e16897710b4b1612e16b04cb6bdf56f4bf",
+    "text_sha256": "a8da80409e0dce36e38ae0ce8c4952a11970a424c07904107ea111778c4d70d1"
+  },
+  "unsw-phys1111": {
+    "sha256": "14ad4cb43a4a8225263ea0a97d9a30e345f0f1cc69afd4968bbac0f23a2edc6c",
+    "text_sha256": "7a11485aa1432fc5505bcef8ea93ce9eb9ec41cce5fa8d6461cb7635963d45cd"
+  },
+  "uoregon-hc222": {
+    "sha256": "9005dc83016ff508ed02aab241718b6777308596c20946a66e78bedf8d6e119d",
+    "text_sha256": "2349831d06e536ef5cd848fd68e419221b8d7773e6196390905b97b6e2b558a9"
+  },
+  "uottawa-mat1302-grades": {
+    "sha256": "21bcfa1206196b87eda5483e1bbea5e0f720d9e8e653e951956226a8afc38822",
+    "text_sha256": "1fc978eaed44bdb0500b01cf55161f7759a9e8332afeb87721735374c119ce9e"
+  },
+  "upd-stat101-gdoc": {
+    "sha256": "3105514754313e5eea39ca3d65890caafa4c7f158ffb434d211547c95b4e9906",
+    "text_sha256": "7f66f56d5cb98aa42ce4a13401a3fa894285505f25ee2461d2fc949f21ec8b55"
+  },
+  "uq-phys1101e-profile": {
+    "sha256": "f1c1b12c4fa908402855ccfc2bc1b73ff8cdf4a080ca6a3f6bbb5f1facbdff40",
+    "text_sha256": "74d45e0420d04ed813c30878cdd37ed9d728429b3f8942bab0fae99d49cb30b1"
+  },
+  "uri-chm112-grades": {
+    "sha256": "c8b1c5a5065c864b57c65b385bfe63cb97c0f96269d15d8b3eec40ebc5a2d8b7",
+    "text_sha256": "c2e2219f94cd660d5dd1144005f418f908dd2389d73c1a8968224768ae531d51"
+  },
+  "usask-biol121": {
+    "sha256": "a4f3b570a1f8539706af8084624898076789d5d5a4f8addf0a3dab06e22fc375",
+    "text_sha256": "54d2c09fdb72d4b39a5cbff2ffa2bbe55a0c4d9168cb732ce98e3eade5ec12db"
+  },
+  "usyd-phys1001": {
+    "sha256": "b0bdf9b1d502cdeccd79c01be2f844b3484f332f928ef4693dc267a2d2cb4ceb",
+    "text_sha256": "1ffac7db3b0c07d0fbfede7fb58cc4a51208919e7e49ef76b86ccaf7e36871ee"
+  },
+  "utep-chem2124": {
+    "sha256": "eb36da97b62cafd4d1f7d3900ba52b174f3cb5e4b240082e1900b9ec599d00e6",
+    "text_sha256": "94688ca4e5f54df4235c0716862eece9d4390c07f8d650dc4dc935578fad1d1f"
+  },
+  "utexas-ch204": {
+    "sha256": "6d4b38fdcabe74491c134e70e7b3c559c6067a8542031121dea8dcebc45cdd71",
+    "text_sha256": "9133637a3a961dec01fef2ab9c5a6fb2f3ec69d0bc9e9e6f6246fcf7ebf0ea98"
+  },
+  "utk-ece202": {
+    "sha256": "90986cebf444f7fa2117160c9093a259bb1608419f14f9dbd21e4fed1111394e",
+    "text_sha256": "96999e0c2e6125447157adffe23ec78c44adbe9b8ed479437872c55fff7fa0f0"
+  },
+  "utk-geog312-gdoc": {
+    "sha256": "b6344ae251d217d8f88a4d2def9eaf851d82721d4dcdfc8cd2f25408642767b1",
+    "text_sha256": "d5e06d41f855e8b845ba413eefe63969e80eb069b74e47c7d5554ffddc9f2ab3"
+  },
+  "utm-sta348-canvas": {
+    "sha256": "3b4c9b48672a4e192917a8b3c3e7020520c4605c007f45566dfb6bfa57a3c3b6",
+    "text_sha256": "f43242aaba557569c4ba83d29a8409e168a56f6e2a1880794cc9ecd05ffa4afe"
+  },
+  "utoledo-bio2150": {
+    "sha256": "06cd91cb18177a8ec9995c7483392d745dc3ecda9e239ca6a948d32c0924a827",
+    "text_sha256": "b98fe9f4b816bb2e5a3f58f95d9aa245e36ea43b520516be12ee465f3f054c5a"
+  },
+  "uvic-biol360": {
+    "sha256": "444b50e8a68de3e80a7c7a47d46aeb1d7bfd9d88a0bd1f7dd8c2bd2ee65bf94c",
+    "text_sha256": "0c35f3807ca0db121616c36c44497adc393175398a790670bcfba61ea62edb6f"
+  },
+  "uw-chem110-canvas": {
+    "sha256": "55f8b2dfee1e7ec482e2c18c4edbd98fa10e5c65fc6241e0695202272c7c904d",
+    "text_sha256": "9028490387ee1ec2bee550e0f71bfbab4903673fb812328591a2e5c90faa15ab"
+  },
+  "uw-stat340": {
+    "sha256": "52f71dddf5f655c6ba0ac2940a77bf39923d40611b12dca532b5c6f108e70bfa",
+    "text_sha256": "37468f5e27146a7692808ed189cb4b566dfe45f958237c23c16bbafa9dc69157"
+  },
+  "uwaterloo-math118-w04": {
+    "sha256": "82cc4647ca96de8055227ade66359d46d4b033d2c3e8b158b6293c2b936acf4a",
+    "text_sha256": "8d76be828abe8406f39a82665b9e4df6de0d139a5cb32619efb7216650a5ed82"
+  },
+  "uzh-phy116-course": {
+    "sha256": "ec02b5fc75d2c8d97be5b71a2e9ce8fb19e622ad4538693dc1aa75e04c4e8a1a",
+    "text_sha256": "93b43eeaef379ddfb0b2bd8a54cd31252e58ea4de25c4b50cb41cd3dc3b802f4"
+  },
+  "vse-ip334": {
+    "sha256": "d61e7f331ad27fcbc1da89d715cbe1b5e52a14310ab028cf566446b50d38f0d9",
+    "text_sha256": "79bf125cb19b290c09d3daf81bdcf33aaf56ab8122d348147d887e322ae9729f"
+  },
+  "warwick-classics-medicine": {
+    "sha256": "2caaeddf77aee790f9ada0f56152c24ca2a3d8001f3ff44eebc6e5f9205bc645",
+    "text_sha256": "be9ea6c47db8f91007e1e6cb8a7c9c218e865f51037485d032de02f9f9a848c6"
+  },
+  "warwick-hi176": {
+    "sha256": "76aba5c6481955e10b39cf022c29061b545c7de770d4c254f5230a24194bb946",
+    "text_sha256": "ecbd35fb932490190ac87e480e878a42127d117ead284fea54b79636b132b691"
+  },
+  "wesleyan-econ110": {
+    "sha256": "099dd36d72cc71ba16d9fa0d3907fbb7fac5f9038bf534e1aab20f0e5c0f6f42",
+    "text_sha256": "43935ec6daaee2409a3d0e4c1d1479416b96cd72756a4602b9696f6584e0037b"
+  },
+  "westminster-4buss008x": {
+    "sha256": "c14cc32c453309b414b3df1d860a6d0381d2d1424d1d94c5f4bc205acb635f19",
+    "text_sha256": "7d12d1d4da60625d3fb10990101d238d59f08c7c42fed02485f6480820dacd4a"
+  },
+  "windward-chem161l": {
+    "sha256": "07b3d3aacc53e28d128e89404f2a1569598d45915f93e21dc81dc7d5361446bb",
+    "text_sha256": "2553332b5941c815fda570e130e5f4c2ddcf8cd03f63047d478c17af1d124f7a"
+  },
+  "wisc-esl118": {
+    "sha256": "b2179e1fcd84b3040874fb55782517cb15778bac02da29955046627e7720825d",
+    "text_sha256": "9e1ce589bb3ac01db0730db4d2a77695b6ca4c6b767da2c9634276deb774c7e0"
+  }
+}

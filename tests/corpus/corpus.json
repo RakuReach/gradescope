@@ -1,0 +1,5334 @@
+[
+  {
+    "id": "brown-cs1600",
+    "url": "https://brown-cs1600.github.io/information/",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Brown University",
+    "dept": "Computer Science",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "homeworks",
+            "hw"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Class discussion",
+          "aliases": [
+            "discussion",
+            "participation"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab",
+            "in-class lab"
+          ],
+          "weight": 60,
+          "components": [
+            {
+              "name": "Lab foundation",
+              "weight": 20
+            },
+            {
+              "name": "In-class lab",
+              "weight": 40
+            },
+            {
+              "name": "Lab deep dive",
+              "weight": 10
+            },
+            {
+              "name": "Concept quiz",
+              "weight": 15
+            },
+            {
+              "name": "Whiteboard check",
+              "weight": 15
+            }
+          ]
+        },
+        {
+          "name": "Project",
+          "aliases": [
+            "final project"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "Wide 8-column table; Weight is the 6th column. The 60% lab weight sits only in the 'In-class lab' row (Lab foundation, Lab deep dive, Concept quiz, Whiteboard check rows have empty weight cells) and also says 7.5% per lab across 8 labs; the per-lab split 20/40/10/15/15 is stated within each lab. Homework: two dropped. Class discussion: can miss 6 classes. Stray % only in the weight column."
+    }
+  },
+  {
+    "id": "illinois-phys427",
+    "url": "https://courses.physics.illinois.edu/phys427/sp2017/course-grading.asp",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Illinois Urbana-Champaign",
+    "dept": "Physics",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Class participation",
+          "aliases": [
+            "participation"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Discussion",
+          "aliases": [],
+          "weight": 10
+        },
+        {
+          "name": "Problem sets",
+          "aliases": [
+            "homework"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Midterm exams",
+          "aliases": [
+            "midterms",
+            "midterm"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Two-column table. Asterisk on Class participation and Discussion: lowest 2 scores dropped. A second table on the page maps letter grades to minimum points (95, 90, ...); those are not categories."
+    }
+  },
+  {
+    "id": "mst-math204",
+    "url": "https://web.mst.edu/bohner/math204-00/204-syllabus.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Missouri University of Science and Technology",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework assignments"
+          ],
+          "weight": 55
+        },
+        {
+          "name": "Hour Exams",
+          "aliases": [
+            "hour exam",
+            "exams"
+          ],
+          "weight": 24
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 21
+        }
+      ],
+      "total": 100,
+      "notes": "Prose gives points (11 homeworks x 50 = 550, 3 hour exams x 80 = 240, final 210; 1000 total); a horizontal table (names in header row, percents in the next row) gives 55/24/21, which matches the points. A second horizontal table maps point ranges to letter grades."
+    }
+  },
+  {
+    "id": "colorado-csci3308",
+    "url": "https://home.cs.colorado.edu/~kena/classes/3308/f03/assessment.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Colorado Boulder",
+    "dept": "Computer Science",
+    "country": "USA",
+    "shape": "points",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homeworks",
+          "aliases": [
+            "homework"
+          ],
+          "weight": 11.1
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab"
+          ],
+          "weight": 11.1
+        },
+        {
+          "name": "Programs",
+          "aliases": [
+            "program"
+          ],
+          "weight": 10.0
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 12.2
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm (in-class)"
+          ],
+          "weight": 11.1
+        },
+        {
+          "name": "Testing Notebook",
+          "aliases": [
+            "notebook"
+          ],
+          "weight": 22.2
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 22.2
+        }
+      ],
+      "total": 99.9,
+      "notes": "Points table out of 900: 10 homeworks 100, 10 labs 100, 3 programs 90, 11 quizzes 110, midterm 100, testing notebook 200, final 200. Converted to percent of 900 and rounded, so the sum is 99.9. Table row labels carry counts ('10 homeworks', '3 programs'). Prose also mentions 90-100% = A as an example cutoff."
+    }
+  },
+  {
+    "id": "ubc-math110",
+    "url": "https://blogs.ubc.ca/dkong8smath110/syllabus/",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of British Columbia",
+    "dept": "Mathematics",
+    "country": "Canada",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "WebWork",
+          "aliases": [
+            "webwork",
+            "online homework"
+          ],
+          "weight": 9
+        },
+        {
+          "name": "Written homework",
+          "aliases": [
+            "homework"
+          ],
+          "weight": 4
+        },
+        {
+          "name": "Workshops",
+          "aliases": [
+            "workshop"
+          ],
+          "weight": 13
+        },
+        {
+          "name": "In-class quizzes",
+          "aliases": [
+            "quizzes"
+          ],
+          "weight": 4
+        },
+        {
+          "name": "Midterm exams",
+          "aliases": [
+            "midterms"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final exams",
+          "aliases": [
+            "finals",
+            "final exam"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "'Name: N%' lines. Midterm exams line reads 10% (October) + 10% (February) and Final exams 20% (December) + 30% (April); labeled as the summed category (20 and 50). A student could also enter four separate exams (10, 10, 20, 30); both are reasonable."
+    }
+  },
+  {
+    "id": "bates-bio140",
+    "url": "https://abacus.bates.edu/acad/depts/biobook/Grading.htm",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Bates College",
+    "dept": "Biology",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Exams",
+          "aliases": [
+            "lecture exams"
+          ],
+          "weight": 57,
+          "components": [
+            {
+              "name": "First exam",
+              "weight": 31.6
+            },
+            {
+              "name": "Second exam",
+              "weight": 31.6
+            },
+            {
+              "name": "Final exam",
+              "weight": 36.8
+            }
+          ]
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "labs on campus",
+            "lab"
+          ],
+          "weight": 23,
+          "components": [
+            {
+              "name": "Weekly lab participation",
+              "weight": 13.0
+            },
+            {
+              "name": "Lab reports first 4 weeks",
+              "weight": 43.5
+            },
+            {
+              "name": "Group research paper",
+              "weight": 43.5
+            }
+          ]
+        },
+        {
+          "name": "Check-ins",
+          "aliases": [
+            "check-in"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Video quizzes",
+          "aliases": [
+            "video quiz"
+          ],
+          "weight": 5
+        }
+      ],
+      "total": 100,
+      "notes": "Nested table: group headers carry '(N% of total)' and indented sub-rows carry course-level percents (exams 18/18/21; labs 3/10/10). Components here are converted to percent within the parent (18/57, 21/57, 3/23, 10/23); the page's own sub-row numbers are percent of the course. Flat alternative a student might enter: First exam 18, Second exam 18, Final exam 21, Lab participation 3, Lab reports 10, Group research paper 10, Check-ins 15, Video quizzes 5. Traps: an HTML-commented row 'Best 5 lab quizzes 10%' (not in effect) and a commented 'Enrichment exercises' item; note an aside that labs are roughly 30% once lab check-ins are counted; check-ins described as roughly half lab-related (approximate, not modeled); 10%/day late penalties; 'Smart Points' bonus added to the final exam."
+    }
+  },
+  {
+    "id": "mun-biol2250",
+    "url": "https://mun.ca/biology/scarr/Biol2250_Grading_Scheme_2016.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Memorial University of Newfoundland",
+    "dept": "Biology",
+    "country": "Canada",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm I",
+          "aliases": [
+            "midterm 1"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Midterm II",
+          "aliases": [
+            "midterm 2"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Lab Writeups",
+          "aliases": [
+            "lab",
+            "labs"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "Word-exported table with columns #, @, Total: Lab Writeups '5 x' '5%' '25%'; Tutorial '5 x' '0%' '0%' (zero-weight, omitted from items). Total column is the course weight. Below the table, 'average course marks in a recent year' lists Midterm I 69%, Midterm II 65%, Final 56%, Labs & Tutorial 92%, Course 68%; these are stray percentages, not weights."
+    }
+  },
+  {
+    "id": "warwick-hi176",
+    "url": "https://warwick.ac.uk/fac/arts/history/students/modules/hi176/assessment/",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Warwick",
+    "dept": "History",
+    "country": "UK",
+    "shape": "list",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Participation/Engagement",
+          "aliases": [
+            "participation",
+            "engagement"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Book Chapter Review",
+          "aliases": [
+            "book review",
+            "1000-word book chapter review"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "2000-word Essay",
+          "aliases": [
+            "short essay",
+            "essay"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "3000-word Essay",
+          "aliases": [
+            "long essay",
+            "3,000 word essay"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Bulleted list with weights in parentheses after each name; names contain word counts (1000, 2000, 3,000) that are not weights. Applies to first-year Warwick students; page says visiting students' modes may differ. Page is a current module page and may change year to year."
+    }
+  },
+  {
+    "id": "sdsu-math121",
+    "url": "https://jmahaffy.sdsu.edu/courses/s00a/math121/introduction/grades.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "San Diego State University",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "webwork",
+            "webwork homework"
+          ],
+          "weight": 13
+        },
+        {
+          "name": "Exams",
+          "aliases": [
+            "hour long exams and the final",
+            "lecture exams"
+          ],
+          "weight": 53,
+          "components": [
+            {
+              "name": "Lecture exams",
+              "weight": 60
+            },
+            {
+              "name": "Final",
+              "weight": 40
+            }
+          ]
+        },
+        {
+          "name": "Lab",
+          "aliases": [
+            "lab and lab exams",
+            "computer labs"
+          ],
+          "weight": 34
+        }
+      ],
+      "total": 100,
+      "notes": "All weights in prose. Course-level numbers: homework 13% of total (stated as 20% of the lecture grade), exams and final 53%, lab 34% (grading also described as 2/3 lecture, 1/3 lab). Exam components: three lecture exams 100 pts each and final 200 pts; each lecture exam about 16% and final about 32% of the lecture grade, giving 60/40 within Exams. Flat alternative: Lecture exams 32, Final 21. Lab: lowest lab dropped, lab exams count double, each lab split 60% WeBWorK / 40% written (not modeled). Many stray percents: 0.1% relative error, <50% on final caps grade at C-, 20% deduction for unexcused absence."
+    }
+  },
+  {
+    "id": "utk-ece202",
+    "url": "https://web.eecs.utk.edu/~dcostine/ECE202/Spring2022/syllabus.php",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Tennessee, Knoxville",
+    "dept": "Electrical Engineering",
+    "country": "USA",
+    "shape": "list",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "hw"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Midterms",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "'Name: N%' list items. Immediately followed by a letter-grade scale given as percent ranges (>=92.5%, 92.5% to 90%, ...) both as loose text and as a table. Lowest homework score dropped."
+    }
+  },
+  {
+    "id": "uw-stat340",
+    "url": "https://sites.stat.washington.edu/peter/340/index.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Washington",
+    "dept": "Statistics",
+    "country": "USA",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Class participation",
+          "aliases": [
+            "participation"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "homeworks"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 35
+        }
+      ],
+      "total": 100,
+      "notes": "Percent-first lines ('5% class participation'). Homework: best 6 out of 7. If a midterm is missed for a serious emergency the final counts 65% (alternative scheme, default used). Stray '50% of the possible scores' in following prose."
+    }
+  },
+  {
+    "id": "wesleyan-econ110",
+    "url": "https://chogendorn.wescreates.wesleyan.edu/110.17f/policies.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Wesleyan University",
+    "dept": "Economics",
+    "country": "USA",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "First midterm",
+          "aliases": [
+            "midterm 1"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Second midterm",
+          "aliases": [
+            "midterm 2"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Problem sets",
+          "aliases": [
+            "adjustment for problem sets",
+            "problem set"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Class participation",
+          "aliases": [
+            "adjustment for class participation",
+            "participation"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Percent-first lines; problem sets and participation are phrased as 'Adjustment for ...'. Whichever-is-higher rule: if the final exceeds the lower midterm, the lower midterm is dropped and the final counts 55% (default 25/25/30 used). Lowest problem set dropped. Exam grading on a 5-point scale with letter equivalents (4.5=A ...) nearby."
+    }
+  },
+  {
+    "id": "nus-uit2201",
+    "url": "https://www.comp.nus.edu.sg/~leonghw/uit2201/Sp2013/info.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "National University of Singapore",
+    "dept": "Computer Science",
+    "country": "Singapore",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Participation",
+          "aliases": [],
+          "weight": 5
+        },
+        {
+          "name": "Quiz I",
+          "aliases": [
+            "quiz",
+            "quiz 1"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Tutorials",
+          "aliases": [
+            "tutorial"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Finals",
+          "aliases": [
+            "final exam",
+            "exam"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Project",
+          "aliases": [],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "Two name/weight pairs per table row (5 columns incl. a spacer), so reading row-wise interleaves categories; last pair is 'Total 100%' (not a category). Marked tentative."
+    }
+  },
+  {
+    "id": "anokaramsey-chem2062",
+    "url": "https://webs.anokaramsey.edu/pieper/Chem2062/CoursePolicies.htm",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Anoka-Ramsey Community College",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "points",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Exams",
+          "aliases": [
+            "exams (best 3 out of 4)"
+          ],
+          "weight": 41.4
+        },
+        {
+          "name": "POGIL Quizzes",
+          "aliases": [
+            "quizzes",
+            "pogil"
+          ],
+          "weight": 9.1
+        },
+        {
+          "name": "Online Homework",
+          "aliases": [
+            "homework",
+            "owl homework"
+          ],
+          "weight": 6.6
+        },
+        {
+          "name": "Lab Reports and Worksheets",
+          "aliases": [
+            "lab reports",
+            "worksheets"
+          ],
+          "weight": 9.7
+        },
+        {
+          "name": "U of MN Field Trip",
+          "aliases": [
+            "field trip"
+          ],
+          "weight": 0.7
+        },
+        {
+          "name": "Biodiesel Project Report",
+          "aliases": [
+            "project report"
+          ],
+          "weight": 4.1
+        },
+        {
+          "name": "Presentation",
+          "aliases": [],
+          "weight": 2.1
+        },
+        {
+          "name": "Prelabs/Housekeeping",
+          "aliases": [
+            "prelabs"
+          ],
+          "weight": 1.4
+        },
+        {
+          "name": "Comprehensive Final Exam",
+          "aliases": [
+            "final exam",
+            "final"
+          ],
+          "weight": 24.9
+        }
+      ],
+      "total": 100,
+      "notes": "Points table out of 724: exams 300 (best 3 of 4 at 100 each), quizzes approx. 66 (6 pts each, low dropped), online homework 48 (4 pts each, low dropped), lab reports/worksheets 70 (10 pts each, low dropped), field trip 5, biodiesel report 30, presentation 15, prelabs 10, final 180. Converted to percent of 724. Quiz total is 'approx.'. Followed by letter scale 90%/80%/70%/60%."
+    }
+  },
+  {
+    "id": "mq-mech1001",
+    "url": "https://unitguides.mq.edu.au/unit_offerings/157769/unit_guide",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Macquarie University",
+    "dept": "Mechanical Engineering",
+    "country": "Australia",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Weekly Practice-based Tasks",
+          "aliases": [
+            "practice-based tasks",
+            "workshop tasks"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Online quiz",
+          "aliases": [
+            "online quizzes",
+            "quizzes"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Assignments",
+          "aliases": [
+            "assignment"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "2023 Session 1 unit guide. Wide 7-column assessment table (Name, Weighting, Hurdle, Due, Groupwork/Individual, Short Extension, AI Approach); each task is repeated below with 'Weighting: N%'. Online quiz = four quizzes x 5%; Assignments = two x 5%. Messy: late-penalty prose with a worked example ('an assessment worth 20%' and '20% deduction'), pass mark 50."
+    }
+  },
+  {
+    "id": "cuboulder-phys2010-canvas",
+    "url": "https://canvas.colorado.edu/courses/57397/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "University of Colorado Boulder",
+    "dept": "Physics",
+    "country": "USA",
+    "shape": "mixed",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Exams",
+          "aliases": [
+            "exams (including final)",
+            "midterms",
+            "final"
+          ],
+          "weight": 50,
+          "components": [
+            {
+              "name": "Midterms",
+              "weight": 60
+            },
+            {
+              "name": "Final",
+              "weight": 40
+            }
+          ]
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Sapling",
+          "aliases": [
+            "sapling homework"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Written Homework",
+          "aliases": [
+            "written hw"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Clickers",
+          "aliases": [
+            "iclicker"
+          ],
+          "weight": 3
+        }
+      ],
+      "total": 103,
+      "notes": "Component weights are percent within the parent; the prose says each of 3 midterms is 10% and the final 20% (course percent), converted to 60/40 within Exams. Weights come from the Canvas assignment-group table (Exams (Including Final) 50%); the prose lists the same weights split differently. Clickers are 3% extra credit, so the page total is 103%. A 0% 'Miscellaneous' group is excluded. Drop rule: up to five clicker days, one Sapling HW, and one written HW are dropped. A letter-grade range line sits right under the weights."
+    }
+  },
+  {
+    "id": "nova-phy202-canvas",
+    "url": "https://novaonline.nvcc.edu/Canvas_template/phy/phy_202/PHY202Assignments-Grading124.htm",
+    "kind": "html",
+    "source": "lms",
+    "institution": "Northern Virginia Community College",
+    "dept": "Physics",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework (webassign)",
+            "webassign"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab assignments"
+          ],
+          "weight": 25,
+          "components": [
+            {
+              "name": "Simulations and Hands-On Activities",
+              "weight": 88
+            },
+            {
+              "name": "Discussions",
+              "weight": 12
+            }
+          ]
+        },
+        {
+          "name": "Research Project",
+          "aliases": [
+            "project"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Major Assessments",
+          "aliases": [
+            "exams",
+            "proctored exams",
+            "proctored assessments"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Component weights are percent within the parent; the page gives Labs sub-parts as 22% and 3% of the course, converted to 88/12. Each table cell holds long descriptions with the weight in a separate column. Stray percentages: a 60% exam-average pass requirement, '50 percent' zero-score rules, and a letter-grade table (90-100 etc.). Major Assessments are four proctored exams."
+    }
+  },
+  {
+    "id": "uw-chem110-canvas",
+    "url": "https://canvas.uw.edu/courses/1664323/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "University of Washington",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Participation",
+          "aliases": [
+            "discussion section"
+          ],
+          "weight": 15,
+          "components": [
+            {
+              "name": "Discussion Section Worksheet",
+              "weight": 53.3
+            },
+            {
+              "name": "Learning Strategies",
+              "weight": 46.7
+            }
+          ]
+        },
+        {
+          "name": "ALEKS",
+          "aliases": [
+            "aleks modules & pie progress",
+            "aleks modules"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Component weights are percent within the parent; the syllabus table lists Participation 15% as one row; the Canvas group table splits it into 8% and 7% of the course (converted to 53.3/46.7). Drop rules: lowest of 3 quizzes dropped; two lowest discussion-section scores dropped. Very messy: a long score-to-grade conversion table with dozens of percentages and ALEKS mastery-threshold headers with percentages. A 0% Non-Graded group is excluded."
+    }
+  },
+  {
+    "id": "uq-phys1101e-profile",
+    "url": "https://course-profiles.uq.edu.au/course-profiles/PHYS1101E-1014-7450",
+    "kind": "html",
+    "source": "lms",
+    "institution": "The University of Queensland (UQ College)",
+    "dept": "Physics",
+    "country": "Australia",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Term 1 Quizzes",
+          "aliases": [
+            "quizzes",
+            "quiz"
+          ],
+          "weight": 10,
+          "components": [
+            {
+              "name": "Week 6 Quiz",
+              "weight": 50
+            },
+            {
+              "name": "Week 10 Quiz",
+              "weight": 50
+            }
+          ]
+        },
+        {
+          "name": "Research Assignment",
+          "aliases": [
+            "project"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Term 2 Exam",
+          "aliases": [
+            "examination"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Laboratory Reports",
+          "aliases": [
+            "lab reports"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Term 3 Exam",
+          "aliases": [
+            "examination"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Component weights are percent within the parent; each quiz is stated as 5% of the course in the task details (converted to 50/50). Source is UQ's public course-profile system (syllabus management export). Wide table: Category | Assessment task | Weight | Due date; the Category column repeats 'Examination' for two tasks, so items use the task names. Weights repeat in the per-task detail section below the table."
+    }
+  },
+  {
+    "id": "ucsd-cse8a-canvas",
+    "url": "https://canvas.ucsd.edu/courses/52302/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "University of California San Diego",
+    "dept": "Computer Science",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Projects",
+          "aliases": [
+            "project"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Assignments",
+          "aliases": [
+            "assignment"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Lab",
+          "aliases": [
+            "labs"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Quiz",
+          "aliases": [
+            "quizzes"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Participation",
+          "aliases": [],
+          "weight": 5
+        }
+      ],
+      "total": 100,
+      "notes": "Syllabus body only links to an external Google Site; the weights appear only in the Canvas assignment-group weights table. A 0% 'Participation Details' group is excluded. Large calendar markup surrounds the table."
+    }
+  },
+  {
+    "id": "hiroshima-generalchem-syllabus",
+    "url": "https://momiji.hiroshima-u.ac.jp/syllabusHtml_en/2026_AA_63220003_en.html",
+    "kind": "html",
+    "source": "lms",
+    "institution": "Hiroshima University",
+    "dept": "Chemistry",
+    "country": "Japan",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Final examination",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 70
+        },
+        {
+          "name": "Short examinations",
+          "aliases": [
+            "short exams"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "University syllabus-system page (English view of a Japanese-taught course; many Japanese strings). Weights are in one table cell as 'Name (N%)' separated by a comma. Note: this system's prior-year pages return 404, so the URL may rot when the year rolls over."
+    }
+  },
+  {
+    "id": "harvard-ext-stat-e100-canvas",
+    "url": "https://canvas.harvard.edu/courses/35159/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "Harvard University (Extension School)",
+    "dept": "Statistics / Social Science",
+    "country": "USA",
+    "shape": "mixed",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Participation",
+          "aliases": [
+            "module questions",
+            "participation (weekly quizzes)"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Missions",
+          "aliases": [
+            "mission"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Exams",
+          "aliases": [
+            "online exams",
+            "online examinations"
+          ],
+          "weight": 40,
+          "components": [
+            {
+              "name": "Exam 1",
+              "weight": 50
+            },
+            {
+              "name": "Exam 2",
+              "weight": 50
+            }
+          ]
+        },
+        {
+          "name": "Final Project",
+          "aliases": [
+            "project"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Component weights are percent within the parent; the prose says two online exams total 40%, each 20% of the course. The Canvas group table instead lists 'Midterm Exam 20%' and 'Final Exam 20%' and three 0% groups; an equally valid reading is two top-level exam items of 20 each. Weights appear three times: bullet sentences, per-section headings like 'Missions (20%)', and the Canvas table."
+    }
+  },
+  {
+    "id": "utm-sta348-canvas",
+    "url": "https://q.utoronto.ca/courses/174782/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "University of Toronto Mississauga",
+    "dept": "Statistics",
+    "country": "Canada",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [],
+          "weight": 20
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm test"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 35
+        }
+      ],
+      "total": 100,
+      "notes": "Canvas (Quercus) syllabus: body has course description only; weights appear only in the Canvas group table."
+    }
+  },
+  {
+    "id": "seneca-edu105-outline",
+    "url": "https://www.senecapolytechnic.ca/ssos/find/EDU105/current/ce",
+    "kind": "html",
+    "source": "lms",
+    "institution": "Seneca Polytechnic",
+    "dept": "Education (Mathematics)",
+    "country": "Canada",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Everyday Math Fundamentals participation",
+          "aliases": [
+            "participation"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Assignments",
+          "aliases": [],
+          "weight": 40
+        },
+        {
+          "name": "Midterm",
+          "aliases": [],
+          "weight": 20
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Seneca's public subject-outline system (Ontario college). 'Modes of Evaluation' lines are percent-first ('N% - Name'). They come right after a letter-grade table full of 'N% to M%' ranges, which must not be read as weights."
+    }
+  },
+  {
+    "id": "austincc-chem1312-syllabus",
+    "url": "https://lighthouse.apps.austincc.edu/faculty/syllabus?id=517572",
+    "kind": "html",
+    "source": "lms",
+    "institution": "Austin Community College",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "points",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Exams",
+          "aliases": [
+            "regular exams",
+            "exam",
+            "final"
+          ],
+          "weight": 90
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "aktiv",
+            "homework sets"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Points-based prose. Explicit: homework is 10% of course total points. Exams: five regular exams plus a final at 100 points each, lowest of the six dropped (final may substitute), so exams fill the remaining 90%. The page's own point arithmetic is inconsistent (650 possible, 550 counted, with homework points left unstated), so 90/10 is the reading a careful student would use. Extra credit capped at 5%. Grading scale given in points with % ranges. The syllabus body is repeated four times in the HTML (print/section copies)."
+    }
+  },
+  {
+    "id": "nyu-math-linalg-gdoc",
+    "url": "https://docs.google.com/document/d/e/2PACX-1vQsLRMMp65j34GcJttOdLWT1P2n2oFBhJTPa2ygrnEYf1GdIjJgfC0Q93Xw7GyBsD7xRhH45S3Y80IP/pub",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "New York University (Courant Institute)",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [],
+          "weight": 15
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Exams",
+          "aliases": [
+            "exam"
+          ],
+          "weight": 65,
+          "components": [
+            {
+              "name": "Exam 1",
+              "weight": 30.8
+            },
+            {
+              "name": "Exam 2",
+              "weight": 30.8
+            },
+            {
+              "name": "Final Exam",
+              "weight": 38.5
+            }
+          ]
+        },
+        {
+          "name": "Project",
+          "aliases": [],
+          "weight": 5
+        }
+      ],
+      "total": 100,
+      "notes": "Component weights are percent within the parent; the page states Exam 1 and Exam 2 at 20% each and the Final at 25% of the course (converted to 30.8/30.8/38.5). Weights are only in sentences under per-category headings (e.g. homework stated as 15% of the overall grade). Drop rules: lowest 2 of 12 homeworks and lowest 2 of 10 quizzes. The Quick Reference 'Grades' heading is empty; a letter-grade bracket table follows."
+    }
+  },
+  {
+    "id": "upd-stat101-gdoc",
+    "url": "https://docs.google.com/document/d/1VYGmUNurF8Hlr6a-ZOG7Ati_qaIzYFnh4LTAqCRnkUM/mobilebasic",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "University of the Philippines Diliman",
+    "dept": "Statistics",
+    "country": "Philippines",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Long Exams",
+          "aliases": [
+            "3 long exams"
+          ],
+          "weight": 60
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [],
+          "weight": 30
+        },
+        {
+          "name": "Quizzes, Assignments",
+          "aliases": [
+            "quizzes",
+            "assignments"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Percent-first entries ('60% - 3 Long Exams') run together on one line in the doc text. Category name on the page is 'Quizzes, Assignments, etc.'. A numeric 1.0-5.0 grade scale with score ranges follows. Public doc served via the /mobilebasic view (the /edit view is JS-rendered)."
+    }
+  },
+  {
+    "id": "fsu-ids2681-gdoc",
+    "url": "https://docs.google.com/document/d/e/2PACX-1vTUWFITkxKbs8RiOjjvb77t3cqV8e0HrlfMmlQLsOHV_1JPEcQ4z7YmjdN6UprDhGknSncPnBSQWjn0/pub",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "Florida State University",
+    "dept": "History / Digital Humanities",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Issue verification",
+          "aliases": [],
+          "weight": 5
+        },
+        {
+          "name": "Deliverables",
+          "aliases": [
+            "deliverable"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Xpath query & visualization",
+          "aliases": [
+            "xpath query"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Wikipedia editing",
+          "aliases": [],
+          "weight": 10
+        },
+        {
+          "name": "Prosopographic work",
+          "aliases": [],
+          "weight": 10
+        },
+        {
+          "name": "Analysis project: collective",
+          "aliases": [
+            "collective analysis project"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Analysis project: individual",
+          "aliases": [
+            "individual analysis project"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Table with a middle multiplier column: Deliverables shown as '8 @ 5% each' and 40%. The prose below says 'nine deliverables' while the table says 8; the 40% total is unaffected. Due-date column holds dates and ranges."
+    }
+  },
+  {
+    "id": "utk-geog312-gdoc",
+    "url": "https://docs.google.com/document/d/e/2PACX-1vSXfMTSbdCi_HcqsmYZGzdpDiViclDFgdc8Zt0xMtd3OzM1KqATj8CM2N6RpIe5UFA3lUgc_lFdLsQ7/pub",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "University of Tennessee, Knoxville",
+    "dept": "Geography (GIS programming)",
+    "country": "USA",
+    "shape": "points",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Lab exercises",
+          "aliases": [
+            "labs",
+            "lab assignments"
+          ],
+          "weight": 60
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [],
+          "weight": 10
+        },
+        {
+          "name": "Midterm exam",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Final Project",
+          "aliases": [
+            "project"
+          ],
+          "weight": 15
+        }
+      ],
+      "total": 100,
+      "notes": "Lines give both points and percent (count, points and percent per category; total 1000 points). Extra credit: 30 points (3% of total grade) for answering peers on GitHub, in a separate section; excluded from items. Stray percentages: 10%/day late penalty, letter-grade table of % ranges."
+    }
+  },
+  {
+    "id": "iheid-econometrics-gsite",
+    "url": "https://sites.google.com/site/bermaniheid/econometrics",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "Geneva Graduate Institute (IHEID)",
+    "dept": "Economics",
+    "country": "Switzerland",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Problem sets",
+          "aliases": [
+            "problem set"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam"
+          ],
+          "weight": 35
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 35
+        }
+      ],
+      "total": 100,
+      "notes": "Google Sites page. One sentence, percent-first, one weight written with a space before the percent sign. The surrounding paragraph describes the components without weights."
+    }
+  },
+  {
+    "id": "umaine-ece417-gdoc",
+    "url": "https://docs.google.com/document/d/e/2PACX-1vQJuraDoCy1Sn7cm8hdzG_3uvrlI6fiZaCLCvXtGqJvyGe2lNgMkGSz8pZZwJKypAFKuZR2TonI5Pqu/pub",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "University of Maine",
+    "dept": "Electrical and Computer Engineering",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Mid-terms",
+          "aliases": [
+            "midterms"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Assignments",
+          "aliases": [],
+          "weight": 45
+        },
+        {
+          "name": "Project",
+          "aliases": [],
+          "weight": 30
+        }
+      ],
+      "total": 95,
+      "notes": "Side-by-side table for two cross-listed courses: ECE 417 (left) and ECE 517 (right: Mid-terms 20, Assignments 45, Project 20, Paper review and presentation 10). Labeled the ECE 417 column (first, undergraduate). Both columns sum to 95% as published; no other weighted item found. Stray percentages: absolute 90/80/70/60% scale line, a letter-grade range table, and a 10-20% late penalty."
+    }
+  },
+  {
+    "id": "deanza-chem50",
+    "url": "https://autotech.deanza.edu/chemistry/documents/2015/s15syllabi/CHEM-050-0102-S15.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "De Anza College",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "pdf-table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm Exams",
+          "aliases": [
+            "midterms",
+            "3 midterm exams",
+            "midterm exam"
+          ],
+          "weight": 45
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "homeworks",
+            "14 homeworks"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Lab Reports",
+          "aliases": [
+            "9 lab reports",
+            "laboratory reports"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Lab Exam",
+          "aliases": [
+            "1 lab exam"
+          ],
+          "weight": 5
+        }
+      ],
+      "total": 100,
+      "notes": "Two side-by-side columns (Lecture | Laboratory) with per-column subtotals 70% and 30%, then Total = 100%. Labeled flat with course-level weights, since the page gives every line as a percent of the course; the subtotals are not separate categories. Letter-grade scale follows with many stray percentages."
+    }
+  },
+  {
+    "id": "unsw-phys1111",
+    "url": "https://unsw.edu.au/content/dam/pdfs/science/physics/course-outlines/1st-year/2022-05-Physics-Course-Outline-1111-T1-2022.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "UNSW Sydney",
+    "dept": "Physics",
+    "country": "Australia",
+    "shape": "pdf-table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Experiments",
+          "aliases": [
+            "labs",
+            "lab assessments",
+            "laboratory"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Online quizzes",
+          "aliases": [
+            "quizzes",
+            "class tests"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final",
+            "final exam (online)"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Wide assessment table; the weight column wraps across lines as multiplier expressions: experiments 3.75% x 8 = 30%, online quizzes 1% x 8 + 2% x 6 = 20%. Use the stated totals. Other % in table cells (60% lab pass threshold) are not weights."
+    }
+  },
+  {
+    "id": "auckland-phys120",
+    "url": "https://cdn.auckland.ac.nz/assets/physics/about/our-courses/documents/CourseOutlinesStage1/Physics%20120%20Course%20Outline.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Auckland",
+    "dept": "Physics",
+    "country": "New Zealand",
+    "shape": "pdf-table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Pre-readings",
+          "aliases": [
+            "pre-reading"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Laboratories",
+          "aliases": [
+            "labs",
+            "laboratory work"
+          ],
+          "weight": 12
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "weekly quizzes"
+          ],
+          "weight": 8
+        },
+        {
+          "name": "Assignments",
+          "aliases": [
+            "online assignments"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Tests",
+          "aliases": [
+            "evening tests",
+            "two 1-hour evening tests"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "exam",
+            "final"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Three-column table (type, weight, description). Drop rules in descriptions: pre-readings best 10 of 12, labs best 4 of 5, quizzes best 10 of 12. Weights written with and without a space before % ('12 %'). A 50% coursework pass requirement follows; not a weight."
+    }
+  },
+  {
+    "id": "hkust-math1005",
+    "url": "https://www.math.hkust.edu.hk/outline/files/2526fall/1005.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Hong Kong University of Science and Technology",
+    "dept": "Mathematics",
+    "country": "Hong Kong",
+    "shape": "pdf-lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "webwork homework",
+            "online homework",
+            "webwork"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Midterm Exam",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 60
+        }
+      ],
+      "total": 100,
+      "notes": "Two schemes on single lines: Scheme 1 HW 15 / Midterm 25 / Final 60; Scheme 2 HW 15 / Midterm 0 / Final 85; the maximum of the two totals is used. Labeled Scheme 1 (first stated). Scheme 2 is an alternative, not extra categories."
+    }
+  },
+  {
+    "id": "utoledo-bio2150",
+    "url": "https://www.utoledo.edu/nsm/bio/pdfs/syllabii/spring2010/2150-002.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Toledo",
+    "dept": "Biology",
+    "country": "USA",
+    "shape": "pdf-table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Lecture Questions",
+          "aliases": [
+            "clicker questions",
+            "lecture question points"
+          ],
+          "weight": 9.1
+        },
+        {
+          "name": "Midterm Exams",
+          "aliases": [
+            "exams",
+            "lecture exams",
+            "exam i",
+            "exam ii",
+            "exam iii",
+            "exam iv"
+          ],
+          "weight": 54.5
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final comprehensive exam",
+            "final"
+          ],
+          "weight": 36.4
+        }
+      ],
+      "total": 100.0,
+      "notes": "Points-based schedule table: Lecture Questions 50, Exams I-IV 100 each, Final 200, TOTAL 550. Only the best 3 of 4 midterms count (300 pts), so the 550 total excludes one exam; percents = 50/550, 300/550, 200/550. Summing all listed rows gives 650, which is wrong. Letter scale (% correct) follows."
+    }
+  },
+  {
+    "id": "swarthmore-econ1",
+    "url": "https://www.swarthmore.edu/sites/default/files/assets/documents/user_profiles/ebronch1/Economics%201%20Syllabus%20-%20Fall%202013.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Swarthmore College",
+    "dept": "Economics",
+    "country": "USA",
+    "shape": "pdf-lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam",
+            "exams"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam",
+            "exams"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Problem sets",
+          "aliases": [
+            "homework"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Writing assignments",
+          "aliases": [
+            "papers",
+            "writing assignment"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "Grading lines use 'percent' not '%'. Exams are grouped in one parenthetical line '(Midterm: 25 percent, Final: 40 percent)'; labeled as two items with course-level weights (no Exams total is stated). Writing assignments: higher paper counts 15%, lower 10% (stated later in prose). Problem sets: 2 may be missed without penalty."
+    }
+  },
+  {
+    "id": "westminster-4buss008x",
+    "url": "https://westminster.ac.uk/sites/default/public-files/general-documents/4BUSS008X-Global-Business-Environment-syllabus.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Westminster",
+    "dept": "Business",
+    "country": "UK",
+    "shape": "pdf-table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Online Tests Portfolio",
+          "aliases": [
+            "portfolio",
+            "online tests"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Report",
+          "aliases": [
+            "coursework",
+            "report (2000 words)"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "UK module proforma table with columns Assessment type / Assessment name / Weighting / minimum mark. Weights are bare numbers (50, 50) with no % sign. Category names taken from the Assessment name column; the type column (Portfolio, Coursework) gives aliases."
+    }
+  },
+  {
+    "id": "ucsb-phys22",
+    "url": "https://web.physics.ucsb.edu/~phys22/Exams%20and%20Grading.html",
+    "kind": "html",
+    "source": "prose",
+    "institution": "University of California, Santa Barbara",
+    "dept": "Physics",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework scores"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Midterms",
+          "aliases": [
+            "midterm",
+            "midterm #1",
+            "midterm #2"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Single paragraph: straight average counts homework and each midterm 20% and final 40%; alternatives (final 60%, 80%, 100%) are computed and the best is used. Labeled the straight average (first stated). Two midterms combined as Midterms 40 (2 x 20%)."
+    }
+  },
+  {
+    "id": "hws-math130",
+    "url": "https://math.hws.edu/eck/math130/s20/more-revisions.html",
+    "kind": "html",
+    "source": "prose",
+    "institution": "Hobart and William Smith Colleges",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm Grade",
+          "aliases": [
+            "new midterm grade",
+            "midterm"
+          ],
+          "weight": 65
+        },
+        {
+          "name": "Post-Break Homework",
+          "aliases": [
+            "homework"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Mid-semester (Spring 2020) revision page; weights in separate sentences under headings. Stray percents: letter scale (90-100%, ...), and a note that Canvas currently shows post-break homework at 5% which will increase (not the weight). Grade floor: course grade not below midterm grade if participation met."
+    }
+  },
+  {
+    "id": "pcc-mth95",
+    "url": "https://spot.pcc.edu/~ajordan/MTH95Winter2020/grades.html",
+    "kind": "html",
+    "source": "prose",
+    "institution": "Portland Community College",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "In-class Group Work",
+          "aliases": [
+            "group work",
+            "in-class activities"
+          ],
+          "weight": 8
+        },
+        {
+          "name": "Online Homework",
+          "aliases": [
+            "webwork",
+            "homework"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Written Assignments",
+          "aliases": [
+            "written homework"
+          ],
+          "weight": 6
+        },
+        {
+          "name": "Exam 1",
+          "aliases": [
+            "exams"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Exam 2",
+          "aliases": [
+            "exams"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Exam 3",
+          "aliases": [
+            "exams"
+          ],
+          "weight": 26
+        }
+      ],
+      "total": 100,
+      "notes": "Weights spread through paragraphs with stray per-unit percents (0.5% per activity, 2% per written assignment). Three exams given in one phrase with weights 25, 25 and 26. Optional class-prep work can shift up to 12% off the exams (to 21/21/22); labeled the default weights without the option."
+    }
+  },
+  {
+    "id": "uoregon-hc222",
+    "url": "https://darkwing.uoregon.edu/~lmbishop/honcol/102/222%20Winter%2016.htm",
+    "kind": "html",
+    "source": "prose",
+    "institution": "University of Oregon",
+    "dept": "Humanities (Honors College literature)",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Response papers",
+          "aliases": [
+            "response paper"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Formal papers",
+          "aliases": [
+            "graded formal papers",
+            "two formal papers",
+            "papers"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Article summaries",
+          "aliases": [
+            "article summary and response"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Participation",
+          "aliases": [],
+          "weight": 5
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 15
+        }
+      ],
+      "total": 100,
+      "notes": "All weights in one sentence; formal papers are '25% each' for two papers, combined as 50. Course description also mentions class presentations with no weight. Page encoding is Windows-1252 (mojibake quotes). GPA point table follows."
+    }
+  },
+  {
+    "id": "warwick-classics-medicine",
+    "url": "https://warwick.ac.uk/fac/arts/classics/intranets/students/modules/medicine/assessment",
+    "kind": "html",
+    "source": "prose",
+    "institution": "University of Warwick",
+    "dept": "Classics and Ancient History",
+    "country": "UK",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Final exam",
+          "aliases": [
+            "exam"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Essays",
+          "aliases": [
+            "two essays",
+            "essay"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Prose: exam counts 50% of the final mark; the two essays together make up the remaining 50% (per-essay split not stated). Stray percent: late penalty 5% per day."
+    }
+  },
+  {
+    "id": "eur-intro-programming",
+    "url": "https://feb21011.ese.eur.nl/grading-and-exams",
+    "kind": "html",
+    "source": "prose",
+    "institution": "Erasmus University Rotterdam",
+    "dept": "Computer Science (Econometrics school)",
+    "country": "Netherlands",
+    "shape": "sentence",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Assignments",
+          "aliases": [
+            "graded assignments",
+            "assignment sets"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Exam",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 90
+        }
+      ],
+      "total": 100,
+      "notes": "One sentence with parenthetical weights: assignments (10%) and exam (90%). Three graded assignment sets. No other percentages."
+    }
+  },
+  {
+    "id": "ufl-maa4211-grade-scales",
+    "url": "https://people.clas.ufl.edu/groisser/classes/4211_f15/grade_scales",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Florida",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [],
+      "total": 0,
+      "notes": "Negative. Course page with per-assignment and per-exam letter-grade cutoff tables (A/B/C/D), point totals per assignment, percentages of cutoffs and class averages, and a final-grade distribution. It refers to grading formulas announced elsewhere but never states category weights on this page."
+    }
+  },
+  {
+    "id": "duke-math106l-grading",
+    "url": "https://math.duke.edu/~rann/106Lmaterials/grading.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Duke University",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "pdf-lines",
+    "split": "dev",
+    "expected": {
+      "items": [],
+      "total": 0,
+      "notes": "Negative. S/U (pass/fail) course. Many percentages appear (resubmission credit example, passing thresholds such as 80%/85% on take-home portions and 55%/60% on in-class exams) but they are pass thresholds, not category weights. Passing requires credit counts (e.g. 31 of 34, 8 of 10 quizzes)."
+    }
+  },
+  {
+    "id": "davidson-dig215-specs",
+    "url": "https://courses.digitaldavidson.net/death19/grading/",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Davidson College",
+    "dept": "Digital Studies (humanities)",
+    "country": "USA",
+    "shape": "list",
+    "split": "dev",
+    "expected": {
+      "items": [],
+      "total": 0,
+      "notes": "Negative. Specifications grading: assignments are Satisfactory/Unsatisfactory (or Sophisticated) and letter grades come from C/B/A bundles with counts of blog posts, projects and allowed absences, plus tokens. Category names appear (blog posts, projects, attendance) but there are no weights or points."
+    }
+  },
+  {
+    "id": "hkust-math2350-grading",
+    "url": "https://www.math.hkust.edu.hk/~machas/la_ode/fall2021/Grading.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Hong Kong University of Science and Technology",
+    "dept": "Mathematics",
+    "country": "Hong Kong",
+    "shape": "pdf-lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Worksheets",
+          "aliases": [
+            "worksheet"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Weights are on one line separated by semicolons. Surrounding stray numbers: a worked example (scores out of 26/80, coefficients 0.10/0.40/0.50, result 85.48), an absolute letter scale (97-100 A+ ...), a relative scale using mean and SD, and a pass threshold of 30. Letter grade uses whichever scale is better; that does not change the weights."
+    }
+  },
+  {
+    "id": "uottawa-mat1302-grades",
+    "url": "https://alistairsavage.ca/mat1302/grades",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Ottawa",
+    "dept": "Mathematics",
+    "country": "Canada",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterms",
+          "aliases": [
+            "midterm",
+            "midterm exams"
+          ],
+          "weight": 45,
+          "components": [
+            {
+              "name": "Midterm 1",
+              "weight": 33.3
+            },
+            {
+              "name": "Midterm 2",
+              "weight": 33.3
+            },
+            {
+              "name": "Midterm 3",
+              "weight": 33.3
+            }
+          ]
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 55
+        }
+      ],
+      "total": 100,
+      "notes": "Page gives Midterms 45% with three midterms at 15% each; components converted to within-parent share (15/45 = 33.3 each). Lowest midterm (including a missed one) is replaced by the final exam score if to the student's advantage. Must pass the final to pass the course. A student could also enter three 15% midterm categories; the top-level reading of 45% is chosen because the page lists it that way."
+    }
+  },
+  {
+    "id": "uri-chm112-grades",
+    "url": "https://www.chm.uri.edu/weuler/chm112/grades.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Rhode Island",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "points",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Hour exams",
+          "aliases": [
+            "exams",
+            "hour exam"
+          ],
+          "weight": 44.4
+        },
+        {
+          "name": "Quizzes and homework",
+          "aliases": [
+            "homework",
+            "quizzes",
+            "homework/quiz"
+          ],
+          "weight": 38.9
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 16.7
+        }
+      ],
+      "total": 100,
+      "notes": "Points-based, 900 total (page divides by 9): four hour exams 100 pts each = 400, quizzes+homework capped at 350 (more than 350 offered), final 150. Alternative stated by the page: if the final alone (x 11/3) is better, final counts 550 and hour exams 0; the default first reading (400/150) is used. Exam total is then rescaled by a nonlinear formula before adding homework/quiz points; ignored for weights. Page also has a letter-grade cutoff table."
+    }
+  },
+  {
+    "id": "iitk-mth102-evaluation",
+    "url": "https://home.iitk.ac.in/~santosha/Evaluation.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Indian Institute of Technology Kanpur",
+    "dept": "Mathematics and Statistics",
+    "country": "India",
+    "shape": "points",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Mid-semester examination",
+          "aliases": [
+            "mid-sem exam",
+            "midsem",
+            "mid-semester exam"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "End-semester examination",
+          "aliases": [
+            "end-sem exam",
+            "endsem",
+            "end-semester exam"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "MTH102A evaluation page (linked from the course page). Marks out of 200: mid-sem 60, end-sem 100, two quizzes each of 20 marks (40). Converted to percent. Quizzes could be entered as two 10% items; combined here since the page groups them."
+    }
+  },
+  {
+    "id": "gatech-cs1331",
+    "url": "https://classes.cc.gatech.edu/AY2014/cs1331a_spring/grading.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Georgia Institute of Technology",
+    "dept": "Computer Science",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Program Homeworks",
+          "aliases": [
+            "homeworks",
+            "program homework",
+            "hw"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Tests",
+          "aliases": [
+            "exams",
+            "test"
+          ],
+          "weight": 51
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 26
+        },
+        {
+          "name": "Participation & Attendance",
+          "aliases": [
+            "participation",
+            "attendance"
+          ],
+          "weight": 3
+        }
+      ],
+      "total": 100,
+      "notes": "Three-column table: name, per-unit expression, category total. Multipliers use '@' (ten homeworks at 2% each, three tests at 17% each); the third column holds the category totals used here. Participation is written with a leading zero (03%). The letter-grade scale table (90 - 100 = A ...) comes first, and a 60% pass/fail threshold sits in the prose; neither is a weight."
+    }
+  },
+  {
+    "id": "koc-mech206",
+    "url": "https://mysite.ku.edu.tr/ilazoglu/?p=80",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Koç University",
+    "dept": "Mechanical Engineering",
+    "country": "Turkey",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterms"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 35
+        },
+        {
+          "name": "Research Project",
+          "aliases": [
+            "project"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Homework",
+          "aliases": [],
+          "weight": 10
+        }
+      ],
+      "total": 115,
+      "notes": "WordPress page whose main content is a long table of student ID numbers and final-exam scores (some above 100), followed by space-aligned 'Name   N%' lines and a stated Total of 115%. Labeled exactly as stated; the page gives no reason for the extra 15% (no extra-credit wording), so a parser should report the 115 total rather than renormalize. Two midterms are scheduled but only one Midterm weight is given."
+    }
+  },
+  {
+    "id": "umd-astr430",
+    "url": "https://www.astro.umd.edu/~dcr/Courses/ASTR430/syllabus/node5.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Maryland, College Park",
+    "dept": "Astronomy",
+    "country": "USA",
+    "shape": "table",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Participation",
+          "aliases": [
+            "in-class participation"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quizzes (6)",
+            "quiz"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework (6)",
+            "homework assignments"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Term Project",
+          "aliases": [
+            "project"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "LaTeX2HTML-generated syllabus node; two-column table with counts in parentheses in the names. A letter-grade threshold table (87.5% and above, ...) follows. Page is from 2005."
+    }
+  },
+  {
+    "id": "citytech-mat1275",
+    "url": "https://openlab.citytech.cuny.edu/davie-mat1275co-spr2024/grading-policy/",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "New York City College of Technology (CUNY)",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "lines",
+    "split": "dev",
+    "expected": {
+      "items": [
+        {
+          "name": "Exams",
+          "aliases": [
+            "exam"
+          ],
+          "weight": 60
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "CUNY OpenLab (WordPress) course page. Three 'Name N%' lines with wide space padding between name and percent. Exams (term exams) and Final Exam are separate categories. Very short page; heavy site navigation around it."
+    }
+  },
+  {
+    "id": "tcd-mau11404",
+    "url": "https://www.maths.tcd.ie/undergraduate/modules2526/MAU11404.php",
+    "kind": "html",
+    "source": "prose",
+    "institution": "Trinity College Dublin",
+    "dept": "Mathematics (Theoretical Physics)",
+    "country": "Ireland",
+    "shape": "sentence",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Examination",
+          "aliases": [
+            "exam",
+            "2-hour examination"
+          ],
+          "weight": 70
+        },
+        {
+          "name": "Continuous assessment",
+          "aliases": [
+            "ca"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Module descriptor page. Only the continuous-assessment share (30%) is stated; the end-of-semester exam weight is the implied remainder (70%). A 40% overall pass mark and supplemental-reassessment rules follow; those are not weights."
+    }
+  },
+  {
+    "id": "ucmerced-chem10",
+    "url": "https://faculty.ucmerced.edu/emenke/Chem10_s11/syllabus/syllabus.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of California, Merced",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "points",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Laboratory reports",
+          "aliases": [
+            "lab reports",
+            "laboratory"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "In-class participation",
+          "aliases": [
+            "participation",
+            "clicker"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "In-class exams",
+          "aliases": [
+            "exams",
+            "midterms"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "webassign"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Dash-led lines giving points out of 1000: lab reports 300 (30 each, best 10 count), participation 100, two in-class exams 200 (100 each), homework 200, final 200. A letter scale in points (990, 940, ...) follows. A missed exam with an excuse shifts its points to the other exam (not modeled)."
+    }
+  },
+  {
+    "id": "uab-econ-policy-102468",
+    "url": "https://guies.uab.cat/guies_docents/public/portal/html/2023/assignatura/102468/en",
+    "kind": "html",
+    "source": "lms",
+    "institution": "Universitat Autonoma de Barcelona",
+    "dept": "Economics",
+    "country": "Spain",
+    "shape": "mixed",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "First partial exam",
+          "aliases": [
+            "first exam",
+            "partial exam"
+          ],
+          "weight": 35
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "second partial exam",
+            "final exam (second partial exam)"
+          ],
+          "weight": 35
+        },
+        {
+          "name": "Coursework",
+          "aliases": [
+            "work"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Exercises delivered in class",
+          "aliases": [
+            "exercises",
+            "in-class exercises"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Public course-guide system (2023 edition). Weights appear twice: in prose headings with parenthetical percents and in an Assessment Activities table whose other columns are hours, ECTS (decimals) and long comma lists of learning-outcome numbers. Grades use a 0-10 scale (pass 5, retake band 3.5-5). Students may instead opt for a single comprehensive exam worth 100%; the default continuous-evaluation scheme is labeled."
+    }
+  },
+  {
+    "id": "iseg-ulisboa-econ1",
+    "url": "https://fenix.iseg.ulisboa.pt/courses/e1-e-565952135564281/metodo-de-avaliacao-detalhado",
+    "kind": "html",
+    "source": "lms",
+    "institution": "ISEG, University of Lisbon",
+    "dept": "Economics",
+    "country": "Portugal",
+    "shape": "sentence",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm test",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Exam",
+          "aliases": [
+            "regular-period exam",
+            "final exam"
+          ],
+          "weight": 60
+        }
+      ],
+      "total": 100,
+      "notes": "FenixEdu public course page (Economics I, 2019/20). Weights only in conditional prose: final grade is 40% midterm / 60% exam, but if the exam beats the midterm (and the midterm is at least 5) the exam alone counts; below 7.5/20 on the exam the exam grade is final. Labeled the stated 40/60 weighting. Grades are out of 20; thresholds 7.5 and 5 are not weights. A repeat-period exam option is described as an alternative."
+    }
+  },
+  {
+    "id": "utexas-ch204",
+    "url": "https://anderson.cm.utexas.edu/courses/ch204-oldSpring2009/grading.html",
+    "kind": "html",
+    "source": "prose",
+    "institution": "The University of Texas at Austin",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "in-class quizzes",
+            "quiz"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Laboratory work and reports",
+          "aliases": [
+            "lab reports",
+            "laboratory work",
+            "lab"
+          ],
+          "weight": 70,
+          "components": [
+            {
+              "name": "Experiment 1",
+              "weight": 8.6
+            },
+            {
+              "name": "Experiment 2",
+              "weight": 11.4
+            },
+            {
+              "name": "Experiment 3",
+              "weight": 11.4
+            },
+            {
+              "name": "Experiment 4",
+              "weight": 11.4
+            },
+            {
+              "name": "Experiment 5",
+              "weight": 8.6
+            },
+            {
+              "name": "Experiment 6",
+              "weight": 8.6
+            },
+            {
+              "name": "Experiment 7",
+              "weight": 11.4
+            },
+            {
+              "name": "Experiment 8",
+              "weight": 11.4
+            },
+            {
+              "name": "Experiment 9",
+              "weight": 8.6
+            },
+            {
+              "name": "Experiment 10",
+              "weight": 8.6
+            }
+          ]
+        }
+      ],
+      "total": 100,
+      "notes": "All weights in sentences. Quizzes 30% (lowest of 9 dropped; remaining 8 at 3.75% each). Lab work is the remaining 70%; experiments 1, 5, 6, 9, 10 are about 6% of the course each and experiments 2, 3, 4, 7, 8 about 8% each; components converted to percent within the 70% parent (6/70, 8/70). Per-report point values (5, 10, 40, 0-3 bonus, 5 notebook points) and a letter scale (90%, 80%, ...) are not weights. No final exam."
+    }
+  },
+  {
+    "id": "ucr-phys231-gsite",
+    "url": "https://sites.google.com/ucr.edu/p231/rubric",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "University of California, Riverside",
+    "dept": "Physics",
+    "country": "USA",
+    "shape": "lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Written Assessment",
+          "aliases": [
+            "written"
+          ],
+          "weight": 50,
+          "components": [
+            {
+              "name": "Short homework",
+              "weight": 30
+            },
+            {
+              "name": "Long homework",
+              "weight": 70
+            }
+          ]
+        },
+        {
+          "name": "Presented Assessment",
+          "aliases": [
+            "explainer videos",
+            "presented"
+          ],
+          "weight": 32
+        },
+        {
+          "name": "Metacognitive Review",
+          "aliases": [
+            "peer reviews of explainer videos",
+            "peer reviews"
+          ],
+          "weight": 12
+        },
+        {
+          "name": "Contributions to the course",
+          "aliases": [
+            "contributions"
+          ],
+          "weight": 6
+        }
+      ],
+      "total": 100,
+      "notes": "Google Sites page with nested bullets. Written Assessment = five short homeworks at 3% plus five long homeworks at 7% (15/35 of the course, converted to 30/70 within the parent). Presented Assessment = four explainer videos at 8%. Metacognitive Review = four batches of peer reviews at 3%. Sub-bullets give per-unit course percents; top-level totals are used. Possible extra points mentioned without a weight. A 5-point rubric scale follows."
+    }
+  },
+  {
+    "id": "chemeketa-gs104-gsite",
+    "url": "https://sites.google.com/chemeketa.edu/gs104-syllabus/calendar-and-grading",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "Chemeketa Community College",
+    "dept": "Physics (General Science)",
+    "country": "USA",
+    "shape": "points",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab"
+          ],
+          "weight": 33.3
+        },
+        {
+          "name": "Tests",
+          "aliases": [
+            "test"
+          ],
+          "weight": 50,
+          "components": [
+            {
+              "name": "Midterms or quizzes",
+              "weight": 50
+            },
+            {
+              "name": "Final",
+              "weight": 50
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "aliases": [],
+          "weight": 16.7,
+          "components": [
+            {
+              "name": "Video questions",
+              "weight": 50
+            },
+            {
+              "name": "Journals",
+              "weight": 16.7
+            },
+            {
+              "name": "Online homework",
+              "weight": 33.3
+            }
+          ]
+        }
+      ],
+      "total": 100.0,
+      "notes": "Google Sites page, nested point list: Labs 120, Tests 180 (midterms for the online section or quizzes for the hybrid section 90, final 90), Other 60 (video questions 30, journals 10, homework 20); 360 points total, converted to percent; components are percent within parent. In the raw HTML some numbers are split across spans (a 1 and 80 for 180; 1 and 0 for 10). Points are called approximate. Stray numbers: letter scale (90%-100% ...), lab deductions (0.5 and 2 points), up to 10 extra-project points (extra credit, excluded), per-activity point values, a CPU 100% remark."
+    }
+  },
+  {
+    "id": "glasgow-chem1",
+    "url": "https://www.chem.gla.ac.uk/~alanc/teaching/chem1-99.htm",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Glasgow",
+    "dept": "Chemistry",
+    "country": "UK",
+    "shape": "lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Laboratory work",
+          "aliases": [
+            "lab",
+            "laboratory"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Class exam",
+          "aliases": [
+            "class exam (2h)",
+            "class examination",
+            "mid-year class exam"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Short tests",
+          "aliases": [
+            "class tests",
+            "tests"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "End of course exam",
+          "aliases": [
+            "end-of-course examination",
+            "final exam"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Long 1999-2000 first-year handbook page. Lines put durations and notes in parentheses after names (2h, 3h, 4 tests). Elsewhere: a statement that half the mark is continuous assessment, a repeat of the class exam's 30%, a grade-point/GPA table, and credit requirements; none are separate weights."
+    }
+  },
+  {
+    "id": "ljubljana-stat-rules",
+    "url": "https://stat.fmf.uni-lj.si/ef/vs/pravila.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Ljubljana (School of Economics and Business)",
+    "dept": "Statistics",
+    "country": "Slovenia",
+    "shape": "lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework assignments"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Written exam",
+          "aliases": [
+            "exam"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Seminar assignments",
+          "aliases": [
+            "seminar assignment"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Short Probability and Statistics rules page with three 'Name: N%' lines. A grading scale with comma decimals (49,9%) mapping to grades 5-10 follows, plus a homework maximum of 110 points."
+    }
+  },
+  {
+    "id": "hamilton-phy105",
+    "url": "https://physerver.hamilton.edu/courses/Spring17/Phy105/Introduction.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Hamilton College",
+    "dept": "Physics",
+    "country": "USA",
+    "shape": "table",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Exams",
+          "aliases": [
+            "exam",
+            "midterm exams"
+          ],
+          "weight": 60
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Lab",
+          "aliases": [
+            "labs"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "hw",
+            "hw's"
+          ],
+          "weight": 15
+        }
+      ],
+      "total": 100,
+      "notes": "Two-column table. Exams 60% split as ranges (first exam 10-20%, second 15-20%, final 20-30%) chosen to optimize the student's grade, so no fixed sub-weights exist; Exams labeled as one 60% item with no components. Quiz cell includes the count (2 quizzes; best 2 of 3). Homework cell shows (18-2), i.e. lowest two dropped. Liberal arts college."
+    }
+  },
+  {
+    "id": "uct-phy1032s",
+    "url": "https://science.uct.ac.za/media/517140",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Cape Town",
+    "dept": "Physics",
+    "country": "South Africa",
+    "shape": "pdf-table",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Weekly Problem Sets",
+          "aliases": [
+            "problem sets"
+          ],
+          "weight": 6
+        },
+        {
+          "name": "Class Tests",
+          "aliases": [
+            "class test",
+            "tests"
+          ],
+          "weight": 24
+        },
+        {
+          "name": "Laboratory Record",
+          "aliases": [
+            "lab record"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Laboratory Practical Test",
+          "aliases": [
+            "practical test",
+            "lab practical test"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Final Examination",
+          "aliases": [
+            "final exam",
+            "examination"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Two-column assessment table (component, % of final mark) with numbered rows and a TOTAL 100% row. The class-test row also carries a duration and a per-test figure (two tests at 12% each); labeled as one 24% category. Stray percentages nearby: course pass mark of 50%, DP minimums of 35% coursework and 50% lab, and a supplementary-exam band in the 45-49% range."
+    }
+  },
+  {
+    "id": "uca-chem1450",
+    "url": "https://uca.edu/chemistry/files/2017/03/CHEM-1450-Long.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Central Arkansas",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "pdf-table",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Preparation",
+          "aliases": [
+            "preparation points"
+          ],
+          "weight": 9
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 16
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Exams",
+          "aliases": [
+            "exams 1-4",
+            "in-class exams"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 15
+        }
+      ],
+      "total": 100,
+      "notes": "Grading table gives both points and percent per row (out of 1000 points). Caps: labs count up to 200 of 220 possible points, quizzes up to 160 of 180, preparation up to 90 of 264 possible (attendance questions, study modules, online homework); the stated category weights already reflect the caps. The final-exam row includes a date. A one-line letter scale with percent cutoffs follows."
+    }
+  },
+  {
+    "id": "queens-chem397",
+    "url": "https://www.chem.queensu.ca/sites/chemwww/files/uploaded_files/CHEM%2039X%20-%20Updated%20Syllabus.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Queen's University",
+    "dept": "Chemistry",
+    "country": "Canada",
+    "shape": "pdf-table",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "In-Class Assignments",
+          "aliases": [
+            "in-class assignment",
+            "assignments"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Quiz 1",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Quiz 2",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Labs and Lab Reports",
+          "aliases": [
+            "labs",
+            "lab reports"
+          ],
+          "weight": 70
+        }
+      ],
+      "total": 100,
+      "notes": "Three-column table: assessment, aligned course learning outcomes (lists of small integers such as 1,2,3,4,5,6), weighting. The three in-class assignment rows share one wrapped prose cell: 15% in total, lowest of three dropped, best two at 7.5% each. Quiz 1 and Quiz 2 have different weights, so they are separate items. Stray: lab reports must exceed 50% of the lab grade, 5% per day late penalty (repeated twice)."
+    }
+  },
+  {
+    "id": "guelph-engg3490",
+    "url": "https://www.uoguelph.ca/engineering/sites/uoguelph.ca.engineering/files/public/outlines/3490.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Guelph",
+    "dept": "Engineering (Mechatronics)",
+    "country": "Canada",
+    "shape": "pdf-lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab"
+          ],
+          "weight": 38,
+          "components": [
+            {
+              "name": "Lab 1",
+              "weight": 21.1
+            },
+            {
+              "name": "Lab 2",
+              "weight": 21.1
+            },
+            {
+              "name": "Lab 3",
+              "weight": 21.1
+            },
+            {
+              "name": "Lab 4",
+              "weight": 36.8
+            }
+          ]
+        },
+        {
+          "name": "PLC Project",
+          "aliases": [
+            "project"
+          ],
+          "weight": 12
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Lecture-slide PDF with bullet glyphs. Labs 38% split as Labs 1, 2 and 3 at 8% each and Lab 4 at 14% of the course (3 x 8 + 14 = 38); components converted to percent within Labs (8/38, 14/38), summing to 100.1 after rounding. Lab 4 is further split into demo 6% and report 8% (not modeled; one nesting level). Midterm/final are 20/30 or 15/35, whichever is better for the student; labeled the first option. Stray: if a student fails both exams the mark is the exam average at 50% each."
+    }
+  },
+  {
+    "id": "uiowa-phys128",
+    "url": "https://homepage.physics.uiowa.edu/~jgoree/teaching/grading_2014.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Iowa",
+    "dept": "Physics (Electronics)",
+    "country": "USA",
+    "shape": "pdf-lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm Exam",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 8
+        },
+        {
+          "name": "Lecture Attendance & quizzes",
+          "aliases": [
+            "attendance",
+            "quizzes",
+            "lecture attendance"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 17
+        },
+        {
+          "name": "Homework",
+          "aliases": [],
+          "weight": 10
+        },
+        {
+          "name": "Lab Reports",
+          "aliases": [
+            "lab reports grade",
+            "labs"
+          ],
+          "weight": 35
+        },
+        {
+          "name": "Lab Project",
+          "aliases": [
+            "project"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "Weighting lines with one name wrapped over two lines and inconsistent spacing before the percent sign. Very messy: typical exam averages in percent, a letter-grade fixed scale (A+ 96-100% ...), a histogram axis labeled 0%-50% in 5% steps and a scatter-plot axis, a lab-report rubric in points (5/5/5/15/10/60), a late penalty in points per day, and a project rubric (design 80%, schematic 10, specifications 10 for prototype; different split for hardwired). The project rubric grades one assignment and is not a category split, so no components."
+    }
+  },
+  {
+    "id": "southplains-chem1406",
+    "url": "https://www.southplainscollege.edu/faculty/sciences/chemistry/2025fall/CHEM_1406_451_HEH_FA25.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "South Plains College",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "pdf-lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Chapter Exams",
+          "aliases": [
+            "chapter exam",
+            "exams"
+          ],
+          "weight": 82.8
+        },
+        {
+          "name": "Experiment Reports",
+          "aliases": [
+            "experiment report",
+            "lab grade",
+            "lab"
+          ],
+          "weight": 17.2
+        }
+      ],
+      "total": 100,
+      "notes": "Points only, no category percentages. Twelve chapter exams at 40 points each (480) and twelve experiment reports at 10 points each with the lowest two dropped (100), for 580 points; the page itself divides by 580 for a numeric grade. Converted 480/580 and 100/580. Every exam and report is listed on its own points line before a summary line per category. Homework practice problems and formative assessments are explicitly ungraded; an extra-credit group assignment has unannounced points and is excluded. Letter grades are given as point ranges."
+    }
+  },
+  {
+    "id": "ucdavis-lin131-canvas",
+    "url": "https://canvas.ucdavis.edu/courses/101347/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "University of California, Davis",
+    "dept": "Linguistics",
+    "country": "USA",
+    "shape": "table",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Participation",
+          "aliases": [],
+          "weight": 20
+        },
+        {
+          "name": "Homework",
+          "aliases": [],
+          "weight": 40
+        },
+        {
+          "name": "Tests",
+          "aliases": [
+            "test"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Canvas syllabus page. Weights appear twice: in an opening prose sentence with upper-case category names and parenthetical percents, and in the Canvas assignment-group weights table with a Total 100% row. Assignments are equally weighted within each category. Calendar and course-summary markup surround the table."
+    }
+  },
+  {
+    "id": "unimelb-actl30004",
+    "url": "https://handbook.unimelb.edu.au/subjects/actl30004/assessment",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Melbourne",
+    "dept": "Actuarial Studies",
+    "country": "Australia",
+    "shape": "table",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Assignment 1",
+          "aliases": [
+            "assignment"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Assignment 2",
+          "aliases": [
+            "assignment"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "End-of-semester examination",
+          "aliases": [
+            "final exam",
+            "exam",
+            "examination"
+          ],
+          "weight": 70
+        }
+      ],
+      "total": 100,
+      "notes": "University handbook assessment table (description, timing, percentage). Descriptions include word counts (1000 words), week numbers and exam length (2 hours) next to the percentages; the exam is also a hurdle. The URL serves the current year's handbook, so content can change year to year."
+    }
+  },
+  {
+    "id": "edinburgh-phys08016",
+    "url": "https://www.drps.ed.ac.uk/25-26/dpt/cxphys08016.htm",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Edinburgh",
+    "dept": "Physics",
+    "country": "UK",
+    "shape": "lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [
+        {
+          "name": "Written Exam",
+          "aliases": [
+            "degree examination",
+            "exam"
+          ],
+          "weight": 80
+        },
+        {
+          "name": "Coursework",
+          "aliases": [],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Course catalogue page. Assessment block lists Written Exam 80%, Coursework 20%, Practical Exam 0% (zero weight, omitted from items); an additional-information line repeats Coursework 20% and Degree Examination 80%. Stray numbers: a learning-hours breakdown (200 total, lecture 33, practical 20, etc.)."
+    }
+  },
+  {
+    "id": "montgomery-math181-sbg",
+    "url": "https://info.montgomerycollege.edu/_documents/faculty/zdong/fall2023-math181-syllabus.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Montgomery College",
+    "dept": "Mathematics",
+    "country": "USA",
+    "shape": "pdf-lines",
+    "split": "heldout2",
+    "expected": {
+      "items": [],
+      "total": 0,
+      "notes": "Negative. Standards-based grading: the course grade depends only on mastery of core and elective standards (letter grade from whether all core standards are mastered and the average 0-4 score). Exams 1-4 and a final exam are listed with dates but only as reassessment opportunities, with no weights. Numbers present are standard counts (30 core, 24 elective, 54 total), the 0-4 mastery scale, and an unrelated 50% class-meeting rule."
+    }
+  },
+  {
+    "id": "gwu-ece2115-lab",
+    "url": "https://blogs.gwu.edu/ece2115/?p=75",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "George Washington University",
+    "dept": "Electrical Engineering",
+    "country": "USA",
+    "shape": "lines",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Attendance",
+          "aliases": [
+            "attendance"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Prelabs",
+          "aliases": [
+            "prelabs",
+            "prelab"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "labs",
+            "lab reports",
+            "lab"
+          ],
+          "weight": 35
+        },
+        {
+          "name": "Midterm Project",
+          "aliases": [
+            "midterm project"
+          ],
+          "weight": 15,
+          "components": [
+            {
+              "name": "Demo",
+              "weight": 50
+            },
+            {
+              "name": "Report",
+              "weight": 50
+            }
+          ]
+        },
+        {
+          "name": "Final Project",
+          "aliases": [
+            "final project"
+          ],
+          "weight": 25,
+          "components": [
+            {
+              "name": "Demo",
+              "weight": 40
+            },
+            {
+              "name": "Presentation",
+              "weight": 20
+            },
+            {
+              "name": "Report",
+              "weight": 40
+            }
+          ]
+        }
+      ],
+      "total": 100,
+      "notes": "Both projects list their parts as percent of the project, given inline in parentheses. Decoy: a lab-report rubric table below gives per-section shares of a single lab report that add to about 100, several marked approximate; not course weights. A 10% late penalty for week-late lab reports is also stray."
+    }
+  },
+  {
+    "id": "uark-econorg-midterm-guide",
+    "url": "https://colleen.quarto.pub/economics-of-organizations/study_guide1.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Arkansas",
+    "dept": "Economics",
+    "country": "USA",
+    "shape": "list",
+    "split": "heldout3",
+    "expected": {
+      "items": [],
+      "total": 0,
+      "notes": "Negative. Midterm study-guide page from a course workbook; the institution is named on the workbook home page. The only percents describe how one exam splits between a multiple-choice part (40) and a short-answer part (60), which sums to 100 but is not the course grading scheme."
+    }
+  },
+  {
+    "id": "tamu-chem120h",
+    "url": "https://www.chem.tamu.edu/class/majors/chem102h/chem/descript-s20.php",
+    "kind": "html",
+    "source": "prose",
+    "institution": "Texas A&M University",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "sentence",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Hour Exams",
+          "aliases": [
+            "one-hour examinations",
+            "examinations",
+            "hour exams"
+          ],
+          "weight": 37.5
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final examination",
+            "final"
+          ],
+          "weight": 18.8
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework assignments",
+            "graded homework"
+          ],
+          "weight": 12.5
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "in-class quizzes",
+            "quiz"
+          ],
+          "weight": 6.3
+        },
+        {
+          "name": "Laboratory",
+          "aliases": [
+            "laboratory portion",
+            "lab"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100.1,
+      "notes": "One running sentence gives points: three hour exams at 100 each, final 150, eight homeworks totalling 100, ten quizzes totalling 50, lab up to 200, out of 800. Converted to percent at 1 decimal, so the total rounds to 100.1. A letter-grade percentage table follows and is not a weight list."
+    }
+  },
+  {
+    "id": "mccc-che100",
+    "url": "https://www.mccc.edu/~dornemam/CHE100outline/C0web_outline.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Mercer County Community College",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "points",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Exams",
+          "aliases": [
+            "exam i",
+            "exam ii",
+            "exam iii",
+            "exam iv",
+            "exam"
+          ],
+          "weight": 76.9
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quizzes",
+            "quiz"
+          ],
+          "weight": 19.2
+        },
+        {
+          "name": "Attendance",
+          "aliases": [
+            "attendance",
+            "attendance points"
+          ],
+          "weight": 3.8
+        }
+      ],
+      "total": 99.9,
+      "notes": "Points basis out of 520: four exams at 100 each (the fourth is cumulative in finals week), best 10 quizzes at 10 each, attendance 20 with deductions per absence. Homework is listed as variable with no points, so it is left out; bonus points are also unscored. Exams could equally be four separate 19.2 items. Stray percents: exams written as 100 % score, a points-to-letter chart with percent ranges, and a second percent chart."
+    }
+  },
+  {
+    "id": "psu-astro597",
+    "url": "https://sites.google.com/psu.edu/a-597/syllabus",
+    "kind": "html",
+    "source": "gdoc",
+    "institution": "Pennsylvania State University",
+    "dept": "Astronomy & Astrophysics",
+    "country": "USA",
+    "shape": "lines",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Problem Sets",
+          "aliases": [
+            "problem sets",
+            "all problem sets combined"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Other Assignments",
+          "aliases": [
+            "other assignments",
+            "short essays"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final Paper + Presentation",
+          "aliases": [
+            "final paper",
+            "presentation",
+            "final paper and presentation"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Attendance and Participation",
+          "aliases": [
+            "attendance",
+            "participation"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Google Sites page. Each line has a parenthetical gloss after the percent. In the raw HTML the 30 for the final paper is split across two spans, so naive text may show a space inside the number. No final exam."
+    }
+  },
+  {
+    "id": "ntu-econ-macro-48908",
+    "url": "https://course.ntu.edu.tw/en/courses/113-2/48908",
+    "kind": "html",
+    "source": "lms",
+    "institution": "National Taiwan University",
+    "dept": "Economics",
+    "country": "Taiwan",
+    "shape": "list",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Classroom Participation",
+          "aliases": [
+            "participation"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quizzes",
+            "quiz"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm",
+            "midterm exam"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final",
+            "final exam"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Course-catalogue system page. Midterm and final share one bullet together with exam dates and times. Quizzes note 5% per quiz, one before each exam; this is inside the 10 and is not separate. Stray: a university note recommending at most 20% A+ grades. The page title moves within the document between fetches but the visible body is stable."
+    }
+  },
+  {
+    "id": "iitrpr-ma101",
+    "url": "https://www.iitrpr.ac.in/MA101/Exam.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Indian Institute of Technology Ropar",
+    "dept": "Mathematics",
+    "country": "India",
+    "shape": "table",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Mid-Semester",
+          "aliases": [
+            "mid semester",
+            "mid-semester",
+            "midsem"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "End-Semester",
+          "aliases": [
+            "end semester",
+            "end-semester",
+            "endsem"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz",
+            "quiz - 1",
+            "quiz - 2"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Tutorial Surprise Tests",
+          "aliases": [
+            "tutorials marks",
+            "surprise tests during tutorials",
+            "tutorial"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Marks out of 100 are used as percent. The exam table has a date-and-venue column, lists the two quizzes as separate rows of 10, and includes a row of 4 bonus marks for in-class surprise tests, giving a stated total of 104; the bonus is excluded. A summary sentence above the table gives the same split. Stray percents: a 30% minimum pass and a 75% attendance rule. Page is for the current year and may change."
+    }
+  },
+  {
+    "id": "uwaterloo-math118-w04",
+    "url": "https://www.math.uwaterloo.ca/~hwolkowi/henry/teachingandresrchURAsGradsPostdocs/w04/118.w04/readme.html",
+    "kind": "html",
+    "source": "prose",
+    "institution": "University of Waterloo",
+    "dept": "Mathematics",
+    "country": "Canada",
+    "shape": "sentence",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Labs",
+          "aliases": [
+            "labs",
+            "lab"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final exam",
+            "final"
+          ],
+          "weight": 65
+        }
+      ],
+      "total": 100,
+      "notes": "A short past-tense statement near the end of a long course page: the lowest lab mark was dropped, then the three weights were applied in one semicolon-separated line. The final was marked out of a smaller total than planned; that is not a weight."
+    }
+  },
+  {
+    "id": "standrews-ph1011",
+    "url": "https://www.st-andrews.ac.uk/subjects/modules/catalogue/?code=PH1011",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of St Andrews",
+    "dept": "Physics",
+    "country": "UK",
+    "shape": "lines",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Written Examination",
+          "aliases": [
+            "written examination",
+            "exam"
+          ],
+          "weight": 60
+        },
+        {
+          "name": "Coursework",
+          "aliases": [
+            "coursework"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Module catalogue entry. The assessment pattern line is repeated verbatim under a re-assessment heading, so a parser may double-count to 200; label the first, standard pattern only. Catalogue shows the current academic year and may change."
+    }
+  },
+  {
+    "id": "hku-econ2255",
+    "url": "https://ug.hkubs.hku.hk/f/course/255250/25_26-ECON2255.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "The University of Hong Kong",
+    "dept": "Economics",
+    "country": "Hong Kong",
+    "shape": "pdf-table",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Performance in tutorials",
+          "aliases": [
+            "tutorials",
+            "tutorial performance"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Group project",
+          "aliases": [
+            "project",
+            "group project presentation"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final",
+            "exam"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Assessment Methods table (method, long description, weight %, aligned outcome numbers like 1,2,3,4). Decoy just above it: a teaching-and-learning activities table giving study hours (total 134) and percent of study load (26.9, 9, 29.9, 4.5, 29.7, total 100); these are not grading weights. The tutorial 20% may be replaced by quizzes, a midterm or writing assignments if enrolment is small (default tutorial reading used). Letter-grade descriptor bands (80%-100% etc.) follow. Long jsPDF-generated document."
+    }
+  },
+  {
+    "id": "usask-biol121",
+    "url": "https://artsandscience.usask.ca/biology/documents/syllabus/syllabi-2019-winter/BIOL%20121%20syllabus%202018-2019%20T2.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Saskatchewan",
+    "dept": "Biology",
+    "country": "Canada",
+    "shape": "pdf-table",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm exam",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 45
+        },
+        {
+          "name": "Lab Assignments & quizzes",
+          "aliases": [
+            "laboratory assignments & quizzes",
+            "lab assignments",
+            "lab quizzes"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Lab exam",
+          "aliases": [
+            "laboratory exam"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Three-column table: evaluation component, % (bare numbers, no percent sign), important dates (e.g. February 6th, a date range in March, or text such as consult the exam schedule), plus a Total 100 row. Each component is then repeated in its own block with a Value line giving the same percent of the final grade, a date, length and format (question counts such as 40 and 100 multiple-choice questions)."
+    }
+  },
+  {
+    "id": "ksu-phys113",
+    "url": "https://www.phys.ksu.edu/personal/wysin/GPI/spring23/gpI-s23.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Kansas State University",
+    "dept": "Physics",
+    "country": "USA",
+    "shape": "pdf-table",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "online homework"
+          ],
+          "weight": 18
+        },
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab"
+          ],
+          "weight": 18
+        },
+        {
+          "name": "Recitation",
+          "aliases": [
+            "recitations"
+          ],
+          "weight": 14
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "chapter quizzes",
+            "quiz"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Points table on a 1000-point scale: homework 180, labs 180, recitation 140, quizzes 300, final 200; converted to percent. Printed side by side with a letter-grade table of point ranges (1000-901 A, 900-801 B, ...), so each text line holds a category, its points, a point range and a letter. Drop rules in the names and prose: labs best 12 of 13, recitation best 14 of 15 (10 points each, lowest dropped), quizzes best 3 of 4."
+    }
+  },
+  {
+    "id": "coquitlam-biol101",
+    "url": "https://www.coquitlamcollege.com/wp-content/uploads/2026/02/BIOL-101.4.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Coquitlam College",
+    "dept": "Biology",
+    "country": "Canada",
+    "shape": "pdf-table",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Participation",
+          "aliases": [],
+          "weight": 5
+        },
+        {
+          "name": "Lab Reports",
+          "aliases": [
+            "lab work"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Lab Exam",
+          "aliases": [
+            "lab work"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Quizzes/Test",
+          "aliases": [
+            "quizzes",
+            "test"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Midterm Exam",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "Fill-in course-outline form: a grid of field labels each followed by a percent box, laid out in four columns. Several boxes are empty (Assignments, Lab Work header, Project, Other show a bare percent sign with no number) and must not become items. Lab Work has no stated weight; its two sub-lines Lab Reports 15% and Lab Exam 20% are labeled as flat items (a nested reading, Lab Work 35 split 42.9/57.1, is also defensible). Decoys: an hours table (Laboratory 39, Total 91), a 50% passing grade, and the form instruction that the total must equal 100%."
+    }
+  },
+  {
+    "id": "utep-chem2124",
+    "url": "https://digitalmeasures.utep.edu/ai/ssmortazavi/schteach/Syllabus%202124%20Spring%202024-1.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "The University of Texas at El Paso",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "pdf-lines",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Attendance",
+          "aliases": [
+            "total attendance",
+            "lab attendance"
+          ],
+          "weight": 45,
+          "components": [
+            {
+              "name": "Experiment attendance",
+              "weight": 88.9
+            },
+            {
+              "name": "Safety lab attendance",
+              "weight": 6.7
+            },
+            {
+              "name": "BioRAFT online training",
+              "weight": 4.4
+            }
+          ]
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "online comprehensive final exam",
+            "final"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Pre-lab Quizzes",
+          "aliases": [
+            "online pre-lab quizzes",
+            "pre-lab"
+          ],
+          "weight": 16.4
+        },
+        {
+          "name": "Post-lab Quizzes",
+          "aliases": [
+            "online post-lab quizzes",
+            "post-lab"
+          ],
+          "weight": 33.6
+        }
+      ],
+      "total": 100,
+      "notes": "Bulleted lines giving points and percent per category out of 1000 points. Attendance is built from 10 experiments at 40 points (400), safety lab attendance 30 and BioRAFT training 20, totaling 450 points = 45%; components are percent within Attendance (400/450, 30/450, 20/450). Final 50 pts = 5%, pre-lab quizzes 164 pts = 16.4%, post-lab quizzes 336 pts = 33.6%. A one-line letter scale (A > 90% ...) sits directly above. A long table of section CRNs and instructor names precedes the syllabus."
+    }
+  },
+  {
+    "id": "uvic-biol360",
+    "url": "https://www.uvic.ca/science/biology/assets/docs/course-outlines/202509/202509-biol-360-course-outline-barbara-ehlting.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "University of Victoria",
+    "dept": "Biology",
+    "country": "Canada",
+    "shape": "pdf-lines",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Midterm 1",
+          "aliases": [
+            "midterms",
+            "first midterm"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Midterm 2",
+          "aliases": [
+            "midterms",
+            "second midterm"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Mini quizzes",
+          "aliases": [
+            "quizzes",
+            "mini quiz"
+          ],
+          "weight": 8
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 35
+        },
+        {
+          "name": "Paper assignment",
+          "aliases": [
+            "group paper assignment"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Artistic assignment",
+          "aliases": [
+            "artistic assignment participation"
+          ],
+          "weight": 2
+        }
+      ],
+      "total": 100,
+      "notes": "Weights appear twice: a one-page summary with sub-bullets and a later evaluation section with bullets, each mixing weights with dates (Oct 9th, Nov 6th, Dec 1st). The two midterms are given together as 20 and 25 percent in one phrase; labeled as two items. Mini quizzes: eight at 1% each. Optional EDI assignment worth 3% which, if submitted, lowers the final to 32%; the default (no EDI) is labeled and EDI is excluded. Missing a midterm shifts weight to the final (not modeled). Many stray percents: a long letter-grade conversion line (A+ 90-100% ...), an N-grade cap of 49, 1.5x exam time, and an academic calendar with 100% and 50% tuition-fee reduction deadlines."
+    }
+  },
+  {
+    "id": "colostate-mech417",
+    "url": "https://www.engr.colostate.edu/~dga/courses/mech417/grading",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Colorado State University",
+    "dept": "Mechanical Engineering",
+    "country": "USA",
+    "shape": "lines",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework (group)"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Lab exercises",
+          "aliases": [
+            "lab exercises (individual and group)",
+            "labs"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Exam I",
+          "aliases": [
+            "exam 1"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Exam II",
+          "aliases": [
+            "exam 2"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Plain WordPress page with five 'Name: N%' lines; names carry parenthetical qualifiers (group, individual and group). Heavy site navigation around it. Other grading details live on a separate course-policies page."
+    }
+  },
+  {
+    "id": "um-malta-bio3080",
+    "url": "https://www.um.edu.mt/science/studyunit/BIO3080",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Malta",
+    "dept": "Biology",
+    "country": "Malta",
+    "shape": "table",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Fieldwork",
+          "aliases": [],
+          "weight": 25
+        },
+        {
+          "name": "Examination",
+          "aliases": [
+            "examination (2 hours)",
+            "exam"
+          ],
+          "weight": 75
+        }
+      ],
+      "total": 100,
+      "notes": "Study-unit description page. Method of assessment table with columns: component, assessment due (SEM1), September resit session (Yes/No), weighting. The exam name includes a duration in parentheses. Page states it describes the current academic year, so content may change year to year."
+    }
+  },
+  {
+    "id": "usyd-phys1001",
+    "url": "https://www.sydney.edu.au/units/PHYS1001/2021-S1C-ND-RE",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "The University of Sydney",
+    "dept": "Physics",
+    "country": "Australia",
+    "shape": "table",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Final exam",
+          "aliases": [
+            "online exam",
+            "final"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Tutorials",
+          "aliases": [
+            "participation",
+            "participation in tutorials"
+          ],
+          "weight": 2
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "online canvas quizzes",
+            "online task"
+          ],
+          "weight": 8
+        },
+        {
+          "name": "Lab test",
+          "aliases": [
+            "practical and canvas test of lab skills"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Mid-semester test",
+          "aliases": [
+            "in-semester test",
+            "online test"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Laboratory report",
+          "aliases": [
+            "lab report",
+            "assignment"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Unit outline assessment table with columns Type | Description | Weight | Due | Length; Due holds week numbers, 'Ongoing', and one explicit due date, Length holds durations (2 hours, 50 minutes, 1h/week). Items use the Description column; the Type column (Participation, Online task, Skills-based evaluation, Assignment) gives aliases. A Laboratory work row is weighted 0% (completion hurdle) and is excluded. Stray: result-band table (85-100, 75-84, ...), 5%-per-day late penalty."
+    }
+  },
+  {
+    "id": "vse-ip334",
+    "url": "https://cesp.vse.cz/wp-content/uploads/page/257/Syllabus_S19.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Prague University of Economics and Business (VSE)",
+    "dept": "International Relations",
+    "country": "Czech Republic",
+    "shape": "pdf-lines",
+    "split": "heldout3",
+    "expected": {
+      "items": [
+        {
+          "name": "Attendance",
+          "aliases": [
+            "lecture attendance"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Preparation for the class",
+          "aliases": [
+            "preparation",
+            "reading summaries"
+          ],
+          "weight": 28
+        },
+        {
+          "name": "Midterm Test",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Active Participation",
+          "aliases": [
+            "participation"
+          ],
+          "weight": 2
+        }
+      ],
+      "total": 100,
+      "notes": "Five 'Name N%' lines, then numbered sections repeating each weight in parentheses. Exam sections list question-type point values (blind map 8/12 points, short answers 6, etc.) that are not course weights. Attendance counts one point per class over 20 classes. A 100-90/89-75 grade table follows."
+    }
+  },
+  {
+    "id": "uci-psych56l-grading",
+    "url": "https://sites.socsci.uci.edu/~lpearl/courses/psych56L_2012win/grading.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of California, Irvine",
+    "dept": "Psychology / Linguistics",
+    "country": "USA",
+    "shape": "list",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Homework",
+          "aliases": [
+            "homeworks"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Bulleted list, one category per line, with the percent in square brackets before the name. Up to 3 percentage points of extra credit are mentioned and excluded. A decimal letter-grade scale (96.5-100 A+ and so on) follows."
+    }
+  },
+  {
+    "id": "grinnell-engl224-assignments",
+    "url": "https://eriksimpson.sites.grinnell.edu/Connections/224/Assignments/index.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Grinnell College",
+    "dept": "English",
+    "country": "USA",
+    "shape": "lines",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Responses and group work",
+          "aliases": [
+            "responses",
+            "group work"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "First exam/paper",
+          "aliases": [
+            "first exam",
+            "first paper"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Second exam/paper",
+          "aliases": [
+            "second exam",
+            "second paper"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Third exam/paper",
+          "aliases": [
+            "third exam",
+            "third paper"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Four 'Name: N%' lines separated by line breaks, below an intro paragraph and a long site navigation menu. Liberal arts college. The three exam/paper items are separate because the third has a different weight."
+    }
+  },
+  {
+    "id": "binghamton-math148-syllabus",
+    "url": "https://people.math.binghamton.edu/mfochler/bu-mfx/bu-math-arv/math-148-arv/math-148-2021-08/html/math-148-syllabus.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Binghamton University (SUNY)",
+    "dept": "Mathematics (Statistics)",
+    "country": "USA",
+    "shape": "points",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Midterm Exams",
+          "aliases": [
+            "3 midterm exams",
+            "midterms"
+          ],
+          "weight": 45
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "12 quizzes",
+            "quiz"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Homeworks",
+          "aliases": [
+            "5 homeworks",
+            "homework"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Long syllabus page; points table out of 1,000: final 300, three midterms at 150 (450), quizzes 150 (two lowest of up to 12 dropped), homework 100 (best 4 of 5 graded at 25). Converted to percent. Traps: two table rows are inside HTML comments (an older quiz policy and an Attendance 30 pts row) and are not in effect; attendance is instead up to 30 bonus points from six random lecture sign-ins, excluded as extra credit. Prose also says exams count for 75% (matches 300 + 450). A points-to-letter scale table follows."
+    }
+  },
+  {
+    "id": "abdn-px1015-catalogue",
+    "url": "https://www.abdn.ac.uk/registry/courses/undergraduate/2024-2025/physics/px1015",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "University of Aberdeen",
+    "dept": "Physics",
+    "country": "UK",
+    "shape": "mixed",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Exam - Multiple Choice Questions",
+          "aliases": [
+            "exam",
+            "multiple choice exam"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Report: Individual",
+          "aliases": [
+            "lab report",
+            "report"
+          ],
+          "weight": 25,
+          "components": [
+            {
+              "name": "Lab Report",
+              "weight": 50
+            },
+            {
+              "name": "Lab Performance",
+              "weight": 50
+            }
+          ]
+        },
+        {
+          "name": "Tutorial Sheet",
+          "aliases": [
+            "tutorial sheets",
+            "tutorials"
+          ],
+          "weight": 12
+        },
+        {
+          "name": "Class Test - Multiple Choice Questions",
+          "aliases": [
+            "class test",
+            "class tests"
+          ],
+          "weight": 13
+        }
+      ],
+      "total": 100,
+      "notes": "Course catalogue page (2024-25 session). Each summative assessment is a block of label/value lines (Assessment Type, Weighting as a bare number, weeks, feedback). Report: Individual 25 has a feedback note splitting it into lab report and lab performance at 12.5% of the course each; converted to 50/50 within the parent. The Weighting fields say 12 for the tutorial sheet and 13 for the class tests, while their feedback notes say 12.5% each (class tests as two at 6.25%); labeled the Weighting field values. A resit block has Weighting 100 and is not a category."
+    }
+  },
+  {
+    "id": "ukim-feit-german-descriptor",
+    "url": "https://feit.ukim.edu.mk/?p=4839",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Ss. Cyril and Methodius University in Skopje (FEEIT)",
+    "dept": "Foreign Languages (German)",
+    "country": "North Macedonia",
+    "shape": "table",
+    "split": "heldout",
+    "expected": {
+      "items": [],
+      "total": 0,
+      "notes": "Negative. Course descriptor table for a German language course at an engineering faculty. The grading section lists numbered components (exams, seminar work/project, activity and participation, final exam) but every weight cell is empty. Numbers present are section numbers like 17.1-17.4, ECTS 3.00, course hours, and a points-to-grade scale (up to 50 points = 5, 51-60 = 6, ... 91-100 = 10), none of which are category weights."
+    }
+  },
+  {
+    "id": "athabasca-engl177-syllabus",
+    "url": "https://www.athabascau.ca/syllabi/engl/engl177.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Athabasca University",
+    "dept": "English (Academic Purposes)",
+    "country": "Canada",
+    "shape": "table",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Assignment 2: Summary and Paragraph Writing",
+          "aliases": [
+            "assignment 2",
+            "summary and paragraph writing"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Assignment 3: Paragraph Writing",
+          "aliases": [
+            "assignment 3",
+            "paragraph writing"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Assignment 4: Short Essay",
+          "aliases": [
+            "assignment 4",
+            "short essay"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Assignment 5: Definition Essay",
+          "aliases": [
+            "assignment 5",
+            "definition essay"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Assignment 6: Research Paper",
+          "aliases": [
+            "assignment 6",
+            "research paper"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Assignment 7: Narrative Essay",
+          "aliases": [
+            "assignment 7",
+            "narrative essay"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Reflective Journal",
+          "aliases": [
+            "journal"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final examination",
+            "final"
+          ],
+          "weight": 20
+        }
+      ],
+      "total": 100,
+      "notes": "Two-column Activity/Weight table with a Total 100% row. Assignment 1 (diagnostic) and Online Quizzes are Complete/Incomplete with no weight and are excluded. Stray percents above the table: 50 percent minimum on the final exam and a 60 percent composite minimum. Distance university; the page is the current course revision, so content can change."
+    }
+  },
+  {
+    "id": "kth-sf2729-examination",
+    "url": "https://www.kth.se/social/course/SF2729/page/examination-and-evaluation/history/1/",
+    "kind": "html",
+    "source": "prose",
+    "institution": "KTH Royal Institute of Technology",
+    "dept": "Mathematics",
+    "country": "Sweden",
+    "shape": "sentence",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Final exam",
+          "aliases": [
+            "exam",
+            "final exam score"
+          ],
+          "weight": 75
+        },
+        {
+          "name": "Homework",
+          "aliases": [
+            "homework score",
+            "homework sets"
+          ],
+          "weight": 25
+        }
+      ],
+      "total": 100,
+      "notes": "Archived version of the course's examination page. Weights appear only in prose: the final score is the better of the exam score alone or a 75/25 weighted average of exam and homework. Labeled the weighted average, the only scheme with categories; the exam-only alternative is noted, not modeled. Stray numbers: 12 homework sets at 3 points (36), six exam problems at 6 points (36), ECTS 7.5, and a points threshold table for grades A-F (30, 27, 24, 21, 18, 16, 0). Navigation is partly in Swedish."
+    }
+  },
+  {
+    "id": "uzh-phy116-course",
+    "url": "https://www.physik.uzh.ch/de/lehre/PHY116.html",
+    "kind": "html",
+    "source": "prose",
+    "institution": "University of Zurich",
+    "dept": "Physics",
+    "country": "Switzerland",
+    "shape": "sentence",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Mid-term",
+          "aliases": [
+            "mid-term examination",
+            "midterm"
+          ],
+          "weight": 25
+        },
+        {
+          "name": "Final exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 75
+        }
+      ],
+      "total": 100,
+      "notes": "Course page (2017-18) covering PHY116 and related variants PHY118/PHY119. The only weights are in one sentence giving the grade as mid-term plus final exam. Online homework and written exercises are eligibility requirements, not weighted: stray thresholds of 50% on the online homework and 50% of written-exercise questions passed. Long staff contact list and schedule surround it."
+    }
+  },
+  {
+    "id": "cityu-ef5010",
+    "url": "https://www.cityu.edu.hk/pg/201415/course/EF5010.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "City University of Hong Kong",
+    "dept": "Economics and Finance",
+    "country": "Hong Kong",
+    "shape": "pdf-table",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Continuous Assessment",
+          "aliases": [
+            "continuous assessment",
+            "coursework",
+            "assignments",
+            "midterm exam"
+          ],
+          "weight": 50
+        },
+        {
+          "name": "Examination",
+          "aliases": [
+            "exam",
+            "final exam"
+          ],
+          "weight": 50
+        }
+      ],
+      "total": 100,
+      "notes": "Postgraduate course form. Assessment table: continuous assessment 50% (assignments plus a midterm, no split given) and a 2-hour examination 50%, with the 50% repeated in a weighting column. Decoy: CILO weighting table also lists 50% + 50%. Must pass both coursework and exam."
+    }
+  },
+  {
+    "id": "acadia-chem1013",
+    "url": "https://chemistry.acadiau.ca/files/sites/chemistry/resources/downloads/Course%20Syllabus%20Files/Fall%202022/CourseOutline-CHEM1013-F2022.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Acadia University",
+    "dept": "Chemistry",
+    "country": "Canada",
+    "shape": "pdf-table",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Labs",
+          "aliases": [
+            "lab",
+            "laboratory"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Assignments",
+          "aliases": [
+            "assignment"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Midterm 1",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Midterm 2",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Midterm 3",
+          "aliases": [
+            "midterm"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Assessment table with a Total 100% row and a third column holding notes (best 10 assignments) and midterm dates/times. A missed midterm with valid excuse moves its weight to the final; the default split is labelled. Stray %: 60% prerequisite grade, 10% late lab penalty."
+    }
+  },
+  {
+    "id": "msutexas-chem1241",
+    "url": "https://directory.msutexas.edu//storage/files/f2026_syllabus_20260819080138.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Midwestern State University",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "pdf-table",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Lab Reports",
+          "aliases": [
+            "lab report"
+          ],
+          "weight": 45
+        },
+        {
+          "name": "Pre-labs",
+          "aliases": [
+            "pre-lab",
+            "prelabs"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Quizzes",
+          "aliases": [
+            "quiz"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Class Participation",
+          "aliases": [
+            "participation"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Attendance",
+          "aliases": [],
+          "weight": 2.5
+        },
+        {
+          "name": "Journal Article Poster",
+          "aliases": [
+            "poster",
+            "core assessments",
+            "journal article poster core assessments teamwork and communication"
+          ],
+          "weight": 2.5
+        },
+        {
+          "name": "Midterm",
+          "aliases": [
+            "midterm exam"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Final",
+          "aliases": [
+            "final exam"
+          ],
+          "weight": 10
+        }
+      ],
+      "total": 100.0,
+      "notes": "General chemistry II lab. Table titled as a points distribution by percent; weights are bare numbers with no % sign and no total row. Poster row name wraps onto a second line. Second table is a letter-grade scale with % cutoffs. Stray %: 10% per day late penalty, 70% cap after a week."
+    }
+  },
+  {
+    "id": "windward-chem161l",
+    "url": "https://windward.hawaii.edu/wp-content/uploads/sites/3/syllabus/2016/Fall/Fall-2016-CHEM161L-63108.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "Windward Community College",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "pdf-lines",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Experiment Worksheets",
+          "aliases": [
+            "worksheets",
+            "experiment worksheet"
+          ],
+          "weight": 33.3
+        },
+        {
+          "name": "Formal Lab Reports",
+          "aliases": [
+            "lab reports",
+            "formal lab report"
+          ],
+          "weight": 25.0
+        },
+        {
+          "name": "Special Activity Report",
+          "aliases": [
+            "special activity"
+          ],
+          "weight": 1.7
+        },
+        {
+          "name": "Online Pre-lab Assignments",
+          "aliases": [
+            "pre-lab assignments",
+            "pre-lab"
+          ],
+          "weight": 10.0
+        },
+        {
+          "name": "Exams",
+          "aliases": [
+            "exam"
+          ],
+          "weight": 30.0
+        }
+      ],
+      "total": 100.0,
+      "notes": "Points-based. Lines give counts and per-item points only (10x20, 3x50, 1x10, 12x5, 2x90); category totals are not printed, stated course total 600 pts. Converted to percent of 600. Stray %: letter scale, pre-lab said to be 10% of each experiment grade, 10% absence deduction, 30% late penalty."
+    }
+  },
+  {
+    "id": "mcgill-mimm384",
+    "url": "https://www.mcgill.ca/microimm/files/microimm/mimm_384_course_outline_fall_2026_final_-_copy.pdf",
+    "kind": "pdf",
+    "source": "pdf",
+    "institution": "McGill University",
+    "dept": "Microbiology and Immunology",
+    "country": "Canada",
+    "shape": "pdf-lines",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Laboratory reports",
+          "aliases": [
+            "lab reports",
+            "laboratory report"
+          ],
+          "weight": 30,
+          "components": [
+            {
+              "name": "Lab 1 report",
+              "weight": 6.7
+            },
+            {
+              "name": "Labs 2-6 report",
+              "weight": 43.3
+            },
+            {
+              "name": "Labs 7-12 report",
+              "weight": 50.0
+            }
+          ]
+        },
+        {
+          "name": "Pre-lab quizzes",
+          "aliases": [
+            "pre-lab quiz",
+            "quizzes"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Lab notebook and performance-based assessment",
+          "aliases": [
+            "lab notebook",
+            "performance-based assessment"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Midterm Exam",
+          "aliases": [
+            "midterm",
+            "midterm exam labs 1-6"
+          ],
+          "weight": 30
+        },
+        {
+          "name": "Final Exam",
+          "aliases": [
+            "final",
+            "final exam labs 7-12"
+          ],
+          "weight": 30
+        }
+      ],
+      "total": 100,
+      "notes": "Evaluations list of name + % lines, repeated as section headings with the % in parentheses. Lab reports split by course percent 2/13/15; converted to percent within the 30 (6.7/43.3/50.0). Stray %: 5% per day late deduction. File is a current-term copy and may change."
+    }
+  },
+  {
+    "id": "humboldt-chem109",
+    "url": "https://canvas.humboldt.edu/courses/46106/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "California State Polytechnic University, Humboldt",
+    "dept": "Chemistry",
+    "country": "USA",
+    "shape": "points",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Introduce yourself",
+          "aliases": [
+            "introduction"
+          ],
+          "weight": 0.2
+        },
+        {
+          "name": "Smartwork 5 Homework",
+          "aliases": [
+            "homework",
+            "smartwork",
+            "smartwork 5 homework assignments"
+          ],
+          "weight": 24.0
+        },
+        {
+          "name": "Attendance/Comprehension Quizzes",
+          "aliases": [
+            "attendance quizzes",
+            "comprehension quizzes",
+            "quizzes"
+          ],
+          "weight": 13.0
+        },
+        {
+          "name": "Midterm Exams and Final",
+          "aliases": [
+            "exams",
+            "midterm exams",
+            "midterms and final"
+          ],
+          "weight": 26.0,
+          "components": [
+            {
+              "name": "Midterms",
+              "weight": 61.5
+            },
+            {
+              "name": "Final",
+              "weight": 38.5
+            }
+          ]
+        },
+        {
+          "name": "Worksheets",
+          "aliases": [
+            "worksheets from 2nd lectures",
+            "worksheet"
+          ],
+          "weight": 12.0
+        },
+        {
+          "name": "Prelab Quizzes",
+          "aliases": [
+            "prelab quiz",
+            "pre-lab quizzes"
+          ],
+          "weight": 4.8
+        },
+        {
+          "name": "Postlab Exercises",
+          "aliases": [
+            "postlab",
+            "post-lab exercises"
+          ],
+          "weight": 20.0
+        }
+      ],
+      "total": 100.0,
+      "notes": "Canvas syllabus body lists categories with points (2/240/130/260/120/48/200) and a stated total of 1000; converted to percent. Exams line gives 2 midterms at 80 and a final at 100 (components as percent within 260). Extra-credit attendance bonus of 58 points (5.8%) excluded. Stray %: grade-change example and letter scale. Canvas footer says assignments are not weighted. Course Summary calendar shows the current date."
+    }
+  },
+  {
+    "id": "stanford-symsys201",
+    "url": "https://canvas.stanford.edu/courses/11423/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "Stanford University",
+    "dept": "Symbolic Systems",
+    "country": "USA",
+    "shape": "table",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Attendance and Participation",
+          "aliases": [
+            "attendance",
+            "participation"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Weekly Blog Comments",
+          "aliases": [
+            "blog comments",
+            "blog"
+          ],
+          "weight": 45
+        },
+        {
+          "name": "Student Presentations",
+          "aliases": [
+            "presentations",
+            "presentation"
+          ],
+          "weight": 40
+        }
+      ],
+      "total": 100,
+      "notes": "Canvas syllabus whose body only links to an external syllabus; weights appear only in the Canvas assignment-group weight table with a 100% total row. Course Summary calendar shows the current date."
+    }
+  },
+  {
+    "id": "wisc-esl118",
+    "url": "https://canvas.wisc.edu/courses/197904/assignments/syllabus",
+    "kind": "html",
+    "source": "lms",
+    "institution": "University of Wisconsin-Madison",
+    "dept": "English as a Second Language",
+    "country": "USA",
+    "shape": "mixed",
+    "split": "heldout",
+    "expected": {
+      "items": [
+        {
+          "name": "Written Work",
+          "aliases": [
+            "written work"
+          ],
+          "weight": 10
+        },
+        {
+          "name": "Structured Research Paper",
+          "aliases": [
+            "srp"
+          ],
+          "weight": 5
+        },
+        {
+          "name": "Presentations",
+          "aliases": [
+            "presentation"
+          ],
+          "weight": 15
+        },
+        {
+          "name": "Guided Research Paper",
+          "aliases": [
+            "grp",
+            "guided research paper (grp)"
+          ],
+          "weight": 20
+        },
+        {
+          "name": "Independent Research Paper",
+          "aliases": [
+            "irp"
+          ],
+          "weight": 40
+        },
+        {
+          "name": "Participation",
+          "aliases": [],
+          "weight": 10
+        }
+      ],
+      "total": 100,
+      "notes": "Canvas page whose body is an unfilled instructor syllabus template (placeholder points chart, letter scale with % ranges). Weights come from the Canvas group table; groups at 0% (two Assignments, two Imported Assignments, a library module) are excluded. Course Summary calendar shows the current date."
+    }
+  },
+  {
+    "id": "nagoya-chem-exercises1",
+    "url": "https://syllabus.adm.nagoya-u.ac.jp/data/2023/06_2023_X320000640710.html",
+    "kind": "html",
+    "source": "course-site",
+    "institution": "Nagoya University",
+    "dept": "Chemistry",
+    "country": "Japan",
+    "shape": "sentence",
+    "split": "heldout",
+    "expected": {
+      "items": [],
+      "total": 0,
+      "notes": "Negative. Bilingual Japanese/English university syllabus-system page. Evaluation section says attitude, contribution, reports and presentations are scored per class and summed, with no percentages or points per category anywhere on the page."
+    }
+  }
+]
