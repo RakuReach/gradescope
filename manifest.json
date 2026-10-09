@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Gradescope+ : Due Date Countdown & Grade Calculator",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Track upcoming Gradescope assignment deadlines and calculate your course grade right on the dashboard. Plus a grade meme.",
   "permissions": [
     "storage"
@@ -13,6 +13,7 @@
         "https://www.gradescope.com/account*"
       ],
       "js": [
+        "syllabus.js",
         "content.js"
       ],
       "css": [

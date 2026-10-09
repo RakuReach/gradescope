@@ -15,12 +15,13 @@ Build with `scripts/package.sh`, then upload `dist/gradescope-plus-<version>.zip
   • Next assignment: a countdown to the earliest assignment you haven't submitted
   • A meme picture that changes with your grade in the course
   • A "See Grade" button with your total percentage and a score breakdown for each assignment
+  • Optional category weights (for example Homework 30%, Exams 70%): paste your syllabus's grading section and they fill in
 
   Who it's for: college students who use Gradescope for homework, exams and projects and want to track deadlines and grades in one place.
 
   FAQ
   How is my grade calculated?
-  Total points earned divided by total points possible across graded assignments. It is an estimate, not your official course grade.
+  By default, total points earned divided by total points possible across graded assignments. If you enter category weights, each category's score is weighted, using only categories that have graded work so far. It is an estimate, not your official course grade.
 
   Does it send my grades anywhere?
   No. All data stays in your browser. Nothing is sent anywhere.
@@ -42,7 +43,7 @@ All images use fictional courses. Edit the pages in `store/src/` and run `script
 
 ## Privacy practices tab
 - **Single purpose:** Show upcoming assignment deadlines and grade estimates on the Gradescope course dashboard.
-- **storage justification:** Caches each course's assignment list for 10 minutes so the dashboard loads quickly without refetching every course.
+- **storage justification:** Caches each course's assignment list for 10 minutes so the dashboard loads quickly without refetching every course, and saves the category weights the user enters for a course.
 - **Host permission justification (gradescope.com):** Reads the user's own Gradescope course pages to get due dates, submission status and scores. It runs only on gradescope.com.
 - **Remote code:** No, I am not using remote code.
 - **Data usage:** Tick only "Website content". Grades are read but never leave the device. Certify all three disclosures (not sold, not used for unrelated purposes, not used for creditworthiness).

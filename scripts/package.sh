@@ -6,5 +6,5 @@ version=$(python3 -c "import json; print(json.load(open('manifest.json'))['versi
 mkdir -p dist
 out="dist/gradescope-plus-${version}.zip"
 rm -f "$out"
-zip -rq "$out" manifest.json content.js content.css images icons -x '.*'
+zip -rq "$out" manifest.json syllabus.js content.js content.css images icons -x '.*'
 echo "$out"
