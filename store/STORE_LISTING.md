@@ -15,7 +15,7 @@ Build with `scripts/package.sh`, then upload `dist/gradescope-plus-<version>.zip
   • Next assignment: a countdown to the earliest assignment you haven't submitted
   • A meme picture that changes with your grade in the course
   • A "See Grade" button with your total percentage and a score breakdown for each assignment
-  • Optional category weights (for example Homework 30%, Exams 70%): paste your syllabus's grading section and they fill in
+  • Optional category weights (for example Homework 30%, Exams 70%) with drop-lowest rules: paste your syllabus's grading section and they fill in, or copy a ready-made prompt to tidy a messy syllabus with an AI chat
 
   Who it's for: college students who use Gradescope for homework, exams and projects and want to track deadlines and grades in one place.
 

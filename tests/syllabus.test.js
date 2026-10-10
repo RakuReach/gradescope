@@ -1,7 +1,7 @@
 // Run with: node --test tests/syllabus.test.js
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { parseSyllabus, parseGrid } = require("../syllabus.js");
+const { parseSyllabus, parseGrid, dropOf } = require("../syllabus.js");
 
 const weights = (r) => r.items.map((i) => `${i.name} ${i.weight}`);
 
@@ -351,4 +351,25 @@ test("one category, or a point scale, is never read with confidence", () => {
   const r = parseSyllabus("Grading: On a 1000 point scale, this is the grading system:\nHomework (15 weeks) 180 1000 - 901 A\nLabs 180 900 - 801 B\nTotal points 1000");
   assert.ok(!r.items.length || r.unsure.length, weights(r).join(", "));
   assert.ok(parseSyllabus("Final exam 100%").unsure.includes("only one category was found"));
+});
+
+test("drop lowest: counts read from notes", () => {
+  const cases = {
+    "drop lowest 2": 2, "lowest dropped": 1, "Two dropped": 2, "best 5 of 7": 2, "best 10 out of 12 quizzes": 2,
+    "the lowest two quiz grades will be dropped": 2, "I will drop your lowest 2 HW scores when compiling final grades": 2,
+    "10 pts each - low score dropped": 1, "lowest two dropped, no late quizzes": 2,
+    // Not a countable drop of scores.
+    "drops one letter grade per day late": null, "you may drop the course": null, "No exam scores will be dropped": null,
+    "Add in your 10 best quiz scores": null, "lowest experiment report grades will be dropped": null,
+    "In-Class Assignment 3 4,6 grade is dropped": null, "Your lowest midterm will be replaced by the final": null,
+  };
+  for (const [note, n] of Object.entries(cases)) assert.equal(dropOf(note), n, note);
+});
+
+test("drop lowest: a note sets the drop of its own row, or of the category a later sentence names", () => {
+  const drops = (r) => r.items.map((i) => `${i.name} ${i.drop ?? 0}`);
+  assert.deepEqual(drops(parseSyllabus("Homework: 30% (drop lowest 2)\nQuizzes: 20%\nFinal Exam: 50%")), ["Homework 2", "Quizzes 0", "Final Exam 0"]);
+  const page = parseSyllabus("Homework 30%\nFinal 40%\nParticipation 30%\nThe lowest homework score will be dropped and will not count towards the final grade.\nYour lowest problem set will be dropped.");
+  assert.deepEqual(drops(page), ["Homework 1", "Final 0", "Participation 0"]);
+  assert.deepEqual(drops(parseSyllabus("```\n- **Homework**: 30% (drop lowest 2)\n- **Final Exam**: 70%\n```")), ["Homework 2", "Final Exam 0"]);
 });

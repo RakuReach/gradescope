@@ -98,7 +98,8 @@
   // ---------- Weights ----------
 
   // Per-course category weights, stored apart from the fetch cache so a refetch never clears them:
-  // { categories: [{ id, name, keywords, weight, average }], overrides: { [assignmentKey]: categoryId | "none" } }
+  // { categories: [{ id, name, keywords, weight, average, drop }], overrides: { [assignmentKey]: categoryId | "none" } }
+  // `drop` is how many of the category's lowest scores don't count; older saves have none.
   const weightsKey = (courseId) => `weights:${courseId}`;
 
   async function getWeights(courseId) {
@@ -111,7 +112,7 @@
   }
 
   function newCategory() {
-    return { id: `c${Math.random().toString(36).slice(2, 8)}`, name: "", keywords: "", weight: 0, average: false };
+    return { id: `c${Math.random().toString(36).slice(2, 8)}`, name: "", keywords: "", weight: 0, average: false, drop: 0 };
   }
 
   // The assignment ID from its link, else its name.
@@ -120,7 +121,7 @@
     return m ? m[1] : `name:${a.name}`;
   }
 
-  const { singularize, parseSyllabus } = globalThis.GradescopePlusSyllabus;
+  const { singularize, parseSyllabus, dropOf } = globalThis.GradescopePlusSyllabus;
 
   // Synonyms used when a category's "Matches names with" is empty. Small and fixed on purpose.
   const FAMILIES = [
@@ -276,6 +277,7 @@
         ...(reused && { id: reused.id, keywords: reused.keywords, average: reused.average }),
         name: displayName(item.name),
         weight: item.weight,
+        drop: item.drop || 0,
       };
       const words = [...item.keywords];
       const g = groupFor(item);
@@ -340,10 +342,14 @@
     let weightTotal = 0;
     for (const g of groups) {
       weightTotal += g.category.weight > 0 ? g.category.weight : 0;
-      g.earned = g.items.reduce((s, a) => s + a.earned, 0);
-      g.possible = g.items.reduce((s, a) => s + a.possible, 0);
-      if (!g.items.length) g.percent = null;
-      else if (g.category.average) g.percent = g.items.reduce((s, a) => s + (a.earned / a.possible) * 100, 0) / g.items.length;
+      // The lowest scores so far are dropped, as Canvas does, keeping at least one.
+      const drop = Math.min(g.category.drop || 0, g.items.length - 1);
+      g.dropped = new Set(drop > 0 ? [...g.items].sort((x, y) => x.earned / x.possible - y.earned / y.possible).slice(0, drop) : []);
+      const counted = g.items.filter((a) => !g.dropped.has(a));
+      g.earned = counted.reduce((s, a) => s + a.earned, 0);
+      g.possible = counted.reduce((s, a) => s + a.possible, 0);
+      if (!counted.length) g.percent = null;
+      else if (g.category.average) g.percent = counted.reduce((s, a) => s + (a.earned / a.possible) * 100, 0) / counted.length;
       else g.percent = (g.earned / g.possible) * 100;
       if (g.percent != null && g.category.weight > 0) {
         total += g.percent * g.category.weight;
@@ -367,6 +373,7 @@
         keywords: c.keywords.trim(),
         weight: c.weight > 0 ? c.weight : 0,
         average: !!c.average,
+        drop: c.drop > 0 ? Math.floor(c.drop) : 0,
       }));
     if (!categories.length) return null;
     const ids = new Set(categories.map((c) => c.id));
@@ -629,8 +636,8 @@
     thead.append(hr);
     const tbody = el("tbody");
 
-    const assignmentRow = (a, nested) => {
-      const tr = el("tr");
+    const assignmentRow = (a, nested, dropped) => {
+      const tr = el("tr", dropped ? "gsnd-dropped" : null);
       const nameTd = el("td", nested ? "gsnd-nested" : null);
       if (a.url) {
         const link = el("a", null, a.name);
@@ -639,6 +646,7 @@
       } else {
         nameTd.textContent = a.name;
       }
+      if (dropped) nameTd.append(el("span", "gsnd-tag", "dropped"));
       tr.append(
         nameTd,
         el("td", "gsnd-num", `${fmtNum(a.earned)} / ${fmtNum(a.possible)}`),
@@ -659,11 +667,13 @@
         if (!g.items.length && !(g.category.weight > 0)) continue;
         let score = "not graded yet";
         if (g.items.length) {
-          score = g.category.average ? `each equal (${g.items.length})` : `${fmtNum(g.earned)} / ${fmtNum(g.possible)}`;
+          const counted = g.items.length - g.dropped.size;
+          score = g.category.average ? `each equal (${counted})` : `${fmtNum(g.earned)} / ${fmtNum(g.possible)}`;
         }
         const pct = g.percent == null ? "" : formatPercent(g.percent);
-        tbody.append(groupRow(g.category.id, `${g.category.name} · ${fmtNum(g.category.weight)}%`, score, pct));
-        g.items.forEach((a) => tbody.append(assignmentRow(a, true)));
+        const drops = g.category.drop > 0 ? ` · drops lowest ${g.category.drop}` : "";
+        tbody.append(groupRow(g.category.id, `${g.category.name} · ${fmtNum(g.category.weight)}%${drops}`, score, pct));
+        g.items.forEach((a) => tbody.append(assignmentRow(a, true, g.dropped.has(a))));
       }
       if (weighted.uncounted.length) {
         tbody.append(groupRow(null, "Not counted", "", ""));
@@ -719,7 +729,7 @@
     // Step 1: categories
     const cats = el("div", "gsnd-cats");
     const catHead = el("div", "gsnd-catHead");
-    ["Category", "Matches names with", "Weight", "Counts by", ""].forEach((h) => catHead.append(el("span", null, h)));
+    ["Category", "Matches names with", "Weight", "Drop lowest", "Counts by", ""].forEach((h) => catHead.append(el("span", null, h)));
     const catRows = el("div");
     cats.append(catHead, catRows);
 
@@ -742,6 +752,9 @@
       const name = input("text", c.name, "", "Homework");
       const weight = input("text", c.weight ? String(c.weight) : "", "");
       weight.inputMode = "decimal";
+      const drop = input("text", c.drop ? String(c.drop) : "", "", "0");
+      drop.inputMode = "numeric";
+      drop.className = "gsnd-dropInput";
       const countsBy = document.createElement("select");
       countsBy.append(option("points", "points"), option("equal", "each equal"));
       countsBy.value = c.average ? "equal" : "points";
@@ -755,6 +768,7 @@
         name.setAttribute("aria-label", `Name for category ${draft.categories.indexOf(c) + 1}`);
         keywords.setAttribute("aria-label", `Words that put an assignment in ${label}`);
         weight.setAttribute("aria-label", `Weight for ${label}, in percent`);
+        drop.setAttribute("aria-label", `How many of the lowest ${label} scores are dropped`);
         countsBy.setAttribute("aria-label", `How ${label} counts`);
         remove.setAttribute("aria-label", `Remove ${label}`);
       };
@@ -770,6 +784,10 @@
         c.weight = Math.max(0, parseFloat(weight.value) || 0);
         update();
       });
+      drop.addEventListener("input", () => {
+        c.drop = Math.max(0, Math.floor(parseFloat(drop.value) || 0));
+        update();
+      });
       countsBy.addEventListener("change", () => {
         c.average = countsBy.value === "equal";
         update();
@@ -779,7 +797,7 @@
       nameWrap.append(categoryDot(draft, c.id), name);
       const weightWrap = el("span", "gsnd-weightInput");
       weightWrap.append(weight, el("span", null, "%"));
-      row.append(nameWrap, keywords, weightWrap, countsBy, remove);
+      row.append(nameWrap, keywords, weightWrap, drop, countsBy, remove);
       return row;
     };
     const renderCategories = () => {
@@ -802,17 +820,23 @@
         "p",
         "gsnd-hint",
         "New assignments are sorted automatically by these words; the earliest word in a name wins. " +
+          "“Drop lowest” leaves out that many of the lowest scores so far, keeping at least one. " +
           "“Each equal” makes every assignment count the same, whatever its points."
       )
     );
     const sortSummary = el("p", "gsnd-muted gsnd-sortSummary");
-    body.append(el("h4", "gsnd-step", "2. Check where each assignment goes"), sortSummary);
+    // Step 2 and the footer describe the categories in the table, so they step aside while a paste is
+    // previewed; the paste panel shows what its categories would find and has its own buttons.
+    const step2 = el("div", "gsnd-step2");
+    step2.append(el("h4", "gsnd-step", "2. Check where each assignment goes"), sortSummary);
+    body.append(step2);
 
     // Step 2: assignments, grouped live by category. "Not counted" comes first because it needs attention.
     const assignList = el("div", "gsnd-assignList");
     const live = el("div", "gsnd-srOnly");
     live.setAttribute("aria-live", "polite");
-    body.append(assignList, live);
+    step2.append(assignList);
+    body.append(live);
 
     const openGroups = new Map(); // group id ("none" for Not counted) -> expanded; set when first shown
     const groupKey = (id) => id || "none";
@@ -822,6 +846,17 @@
       const key = assignmentKey(a);
       if (id === autoCategoryOf(a, draft)) delete draft.overrides[key];
       else draft.overrides[key] = id || "none";
+    };
+    // Moving every unsorted assignment that shares a name ("Prelab 6", "Prelab 7") into a category adds
+    // that name to the category's words, so the next one is sorted too. Returns the name, or null.
+    const learnName = (items, to) => {
+      const c = draft.categories.find((x) => x.id === to);
+      const shared = items.length >= 2 && prefixGroups(items, items.length)[0];
+      if (!c || !shared || matchWords(c).includes(phrase(shared.prefix))) return null;
+      c.keywords = [...matchWords(c), shared.prefix.toLowerCase()].join(", ");
+      const field = catRows.children[draft.categories.indexOf(c)]?.querySelectorAll("input")[1];
+      if (field) field.value = c.keywords;
+      return shared.prefix;
     };
     const groupName = (id) => {
       const c = draft.categories.find((x) => x.id === id);
@@ -896,7 +931,7 @@
       );
       let note = "";
       if (!c) note = "pick a category, or leave them out";
-      else if (c.weight > 0) note = `${fmtNum(c.weight)}%`;
+      else if (c.weight > 0) note = `${fmtNum(c.weight)}%${c.drop > 0 ? ` · drops lowest ${c.drop}` : ""}`;
       else if (items.length) note = "no weight · not counted";
       if (note) toggle.append(el("span", "gsnd-muted", note));
       toggle.addEventListener("click", () => {
@@ -909,14 +944,18 @@
       if (items.length) {
         const moveAll = document.createElement("select");
         moveAll.className = "gsnd-moveAll";
-        moveAll.setAttribute("aria-label", `Move all ${items.length} in ${groupName(id)} to`);
-        moveAll.append(option("", "Move all to…"));
-        draft.categories.filter((x) => x.id !== id).forEach((x) => moveAll.append(option(x.id, labelOf(x))));
-        if (c) moveAll.append(option("none", "Not counted"));
+        // Shows where the whole group is, like each row's select, in the same column; changing it moves them all.
+        moveAll.setAttribute("aria-label", `Category for all ${items.length} in ${groupName(id)}`);
+        moveAll.title = "Change to move all of them";
+        draft.categories.forEach((x) => moveAll.append(option(x.id, labelOf(x))));
+        moveAll.append(option("none", "Not counted"));
+        moveAll.value = c ? c.id : "none";
         moveAll.addEventListener("change", () => {
           const to = moveAll.value === "none" ? null : moveAll.value;
+          const learned = c ? null : learnName(items, to);
           items.forEach((a) => assign(a, to));
-          update({ to, focusGroup: true, message: `Moved ${items.length} to ${groupName(to)}` });
+          const message = `Moved ${items.length} to ${groupName(to)}`;
+          update({ to, focusGroup: true, message: learned ? `${message}. New “${learned}” assignments will go there too.` : message });
         });
         head.append(moveAll);
       }
@@ -994,7 +1033,7 @@
     pasteBox.id = `gsnd-paste-${courseId}`;
     pasteBox.className = "gsnd-pasteBox";
     pasteBox.rows = 6;
-    pasteBox.placeholder = "Homework 30%\nMidterm Exams 2 × 15% = 30%\nFinal Exam 35%\nParticipation 5%";
+    pasteBox.placeholder = "Homework 30% (drop lowest 2)\nMidterm Exams 2 × 15% = 30%\nFinal Exam 35%\nParticipation 5%";
     const pasteLabel = el("label", "gsnd-pasteLabel", "Paste the grading section of your syllabus");
     pasteLabel.htmlFor = pasteBox.id;
     const pastePreview = el("div", "gsnd-pastePreview");
@@ -1002,8 +1041,62 @@
     const useBtn = button("gsnd-btn gsnd-primary", "", () => applyPaste());
     const pasteActions = el("div", "gsnd-row gsnd-actions");
     pasteActions.append(button("gsnd-btn", "Cancel", () => closePaste()), useBtn);
+
+    // For a syllabus too messy to read: a prompt the reader takes to an AI chat of their own, whose
+    // reply comes back in lines this reader takes as they are. Nothing is sent from here.
+    const aiPrompt = () => {
+      const names = [...new Set(assignments.map((a) => a.name))].slice(0, 40);
+      return [
+        "Read the course syllabus I paste below and write out how the final grade is weighted.",
+        "",
+        "Reply with only one code block, one line per graded category, in this format:",
+        "Category name: weight%",
+        "If the syllabus drops the lowest N scores in a category, add (drop lowest N) after the weight. " +
+          "Write “best N of M” as (drop lowest M-N).",
+        "",
+        "Rules:",
+        "- Use only weights the syllabus states. They should add up to 100%.",
+        "- If a category is split into parts with their own weights (for example Exams 50% = Midterm 20% + " +
+          "Final 30%), list each part on its own line instead.",
+        "- Leave out extra credit, the letter-grade scale, and policies that are not weighted categories.",
+        "- If there is more than one grading scheme, use the default one.",
+        ...(names.length ? [`- Where you can, name categories to match these Gradescope assignments: ${names.join(", ")}`] : []),
+        "",
+        "Example:",
+        "Homework: 30% (drop lowest 2)",
+        "Midterm Exam: 25%",
+        "Final Exam: 35%",
+        "Participation: 10%",
+        "",
+        "Syllabus:",
+        "",
+      ].join("\n");
+    };
+    const aiHint = el("p", "gsnd-hint gsnd-aiHint");
+    const copyBtn = button("gsnd-linkBtn", "Copy a prompt for an AI chat", async () => {
+      const prompt = aiPrompt();
+      try {
+        await navigator.clipboard.writeText(prompt);
+      } catch {
+        // No clipboard access: show the prompt to copy by hand.
+        const box = el("textarea", "gsnd-aiPrompt");
+        box.readOnly = true;
+        box.rows = 6;
+        box.value = prompt;
+        box.setAttribute("aria-label", "Prompt for an AI chat");
+        aiHint.replaceChildren("Copy this prompt (it's selected), paste it into ChatGPT, Claude or another AI chat with your syllabus, and paste the reply below.");
+        aiHint.after(box);
+        box.select();
+        return;
+      }
+      copyBtn.textContent = "Prompt copied";
+      live.textContent = "Prompt copied";
+      setTimeout(() => (copyBtn.textContent = "Copy a prompt for an AI chat"), 2500);
+    });
+    aiHint.append("Messy syllabus? ", copyBtn, ", paste it into ChatGPT, Claude or another AI chat with your syllabus, and paste the reply here.");
     pastePanel.append(
       pasteLabel,
+      aiHint,
       pasteBox,
       el("p", "gsnd-hint", "Read on your computer only. Lines without a % or points are skipped."),
       pastePreview,
@@ -1083,11 +1176,19 @@
         const thead = el("thead");
         thead.append(head);
         const tbody = el("tbody");
-        const noteRow = (...content) => {
-          const tr = el("tr", "gsnd-pasteNote");
+        // "12 · HW 1, HW 2, …" on one line; the whole list on hover. null means the row is left out.
+        const foundCell = (list) => {
+          if (!list) return el("td", "gsnd-pasteFound gsnd-muted", "left out");
+          if (!list.length) return el("td", "gsnd-pasteFound gsnd-muted", "none yet");
+          const td = el("td", "gsnd-pasteFound", `${list.length} · ${list.map((a) => a.name).join(", ")}`);
+          td.title = list.map((a) => a.name).join("\n");
+          return td;
+        };
+        const noteRow = (content, cls) => {
+          const tr = el("tr", `gsnd-pasteNote${cls ? ` ${cls}` : ""}`);
           const td = el("td");
           td.colSpan = 3;
-          td.append(...content);
+          td.append(...[content].flat());
           tr.append(td);
           tbody.append(tr);
         };
@@ -1099,8 +1200,6 @@
           const on = kept.includes(item);
           const category = on ? pasted[kept.indexOf(item)] : null;
           const list = on ? found.get(category.id) : [];
-          let names = list.slice(0, 3).map((a) => a.name).join(", ");
-          if (list.length > 3) names += ", …";
           const name = category?.name ?? displayName(item.name);
           const box = el("input");
           box.type = "checkbox";
@@ -1113,24 +1212,35 @@
           const label = el("label", "gsnd-pasteName");
           label.append(box, name);
           const tr = el("tr", on ? null : "gsnd-off");
-          tr.append(
-            el("td", null),
-            el("td", "gsnd-num", `${fmtNum(item.weight)}%`),
-            el("td", list.length ? null : "gsnd-muted", !on ? "left out" : list.length ? `${list.length} · ${names}` : "none yet")
-          );
-          tr.firstChild.append(label);
+          const nameTd = el("td");
+          nameTd.append(label);
+          // The drop rule sits under the name, with the syllabus's words on hover.
+          const dropNote = on && item.drop ? item.notes.find((n) => dropOf(n) === item.drop) : null;
+          if (on && item.drop) {
+            const sub = el("div", "gsnd-pasteSub", `drops ${lowest(item.drop)}`);
+            if (dropNote) sub.title = `From the syllabus: “${dropNote}”`;
+            nameTd.append(sub);
+          }
+          tr.append(nameTd, el("td", "gsnd-num", `${fmtNum(item.weight)}%`), foundCell(on ? list : null));
           tbody.append(tr);
           if (!on) return;
           for (const w of item.warnings) noteRow(`⚠ ${w}`);
-          for (const n of item.notes) noteRow(`Not applied: ${n}`);
+          for (const n of item.notes) if (n !== dropNote) noteRow(`Not applied: ${n}`, "gsnd-pasteAside");
           if (item.parts) {
             const parts = item.parts.map((p) => `${displayName(p.name)} ${fmtNum(p.weight)}%`).join(", ");
-            noteRow(`Made of ${parts}. `, button("gsnd-linkBtn", `Split into ${item.parts.length}`, () => toggle(pasteSplit, item.name)));
+            noteRow([`Made of ${parts}. `, button("gsnd-linkBtn", `Split into ${item.parts.length}`, () => toggle(pasteSplit, item.name))], "gsnd-pasteAside");
           }
           if (item.partOf && item.partOf !== rows[rows.indexOf(item) + 1]?.partOf) {
-            noteRow(`Part of ${displayName(item.partOf)}. `, button("gsnd-linkBtn", "Combine", () => toggle(pasteSplit, item.partOf)));
+            noteRow([`Part of ${displayName(item.partOf)}. `, button("gsnd-linkBtn", "Combine", () => toggle(pasteSplit, item.partOf))], "gsnd-pasteAside");
           }
         });
+        // What the categories would miss, so it can be fixed before or after using them.
+        const missed = assignments.filter((a) => !categoryOf(a, config));
+        if (pasted.length && missed.length) {
+          const tr = el("tr", "gsnd-missed");
+          tr.append(el("td", null, "Not in any category"), el("td"), foundCell(missed));
+          tbody.append(tr);
+        }
         table.append(thead, tbody);
         const sum = el("div", "gsnd-total");
         showTotal(sum, kept.reduce((s, i) => s + i.weight, 0));
@@ -1180,6 +1290,8 @@
     const pasteOpen = () => !pastePanel.hidden;
     function openPaste() {
       step1.hidden = true;
+      step2.hidden = true;
+      footer.hidden = true;
       callout.hidden = true;
       pasteLink.hidden = true;
       pastePanel.hidden = false;
@@ -1190,6 +1302,8 @@
       clearTimeout(pasteTimer);
       pastePanel.hidden = true;
       step1.hidden = false;
+      step2.hidden = false;
+      footer.hidden = false;
       pasteLink.hidden = false;
       pasteLink.focus();
     }
@@ -1260,6 +1374,8 @@
     // Escape steps back one level: out of the paste panel first, then out of the editor.
     return { leave, escape: () => (pasteOpen() ? closePaste() : leave(done)) };
   }
+
+  const lowest = (n) => (n === 1 ? "lowest score" : `lowest ${n} scores`);
 
   function fmtNum(n) {
     return Number.isInteger(n) ? String(n) : n.toFixed(2).replace(/0+$/, "").replace(/\.$/, "");

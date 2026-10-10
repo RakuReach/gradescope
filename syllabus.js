@@ -29,6 +29,7 @@
         line
           .replace(/^\s*(?:[•·▪◦‣*●■□➢➤✓\uf0b7\uf0a7-]|\(?\d{1,2}[.)]|\(?[a-z][.)])\s+/i, "") // bullets and "1." / "a)" markers
           .replace(/^o\s+(?=\S)/, "") // a Word bullet copied from a PDF: "o Final exam 35%"
+          .replace(/^#{1,6}\s+|\*\*|__|`/g, "") // Markdown, as an AI chat's copy button gives it
           .replace(/\.{2,}|_{2,}|\t+|\s*\|\s*| {2,}/g, " ") // dot leaders, tabs, table pipes, wide gaps
           .trim()
       );
@@ -63,6 +64,51 @@
   function noteText(line) {
     const paren = line.match(/\(([^)]*)\)/g)?.find((p) => NOTE.test(p));
     return (paren ? paren.slice(1, -1) : line).trim().replace(/[.;,]$/, "");
+  }
+
+  // How many of a category's lowest scores a note drops: "drop lowest 2", "the lowest two quiz grades
+  // are dropped", "best 5 of 7", "Two dropped". null when it gives no count it is sure of.
+  const COUNTS = { a: 1, an: 1, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
+  const COUNT = `\\d+|${Object.keys(COUNTS).join("|")}`;
+  const countOf = (word) => (word == null ? 1 : COUNTS[word.toLowerCase()] ?? parseInt(word, 10));
+  const WORDS = "(?:[a-z-]+\\s+){0,3}";
+  const WHOSE = "(?:(?:the|your|their|each|every)\\s+)?(?:student'?s\\s+)?";
+  function dropOf(note) {
+    const parts = note.split(/[,;]\s|\.\s/);
+    if (parts.length > 1) return parts.map(dropOf).find((n) => n != null) ?? null;
+    if (/\b(?:late|per day|letter|penalt|absen)/i.test(note)) return null; // "drops one letter grade per day"
+    const best = note.match(new RegExp(`\\b(?:best|top|highest)\\s+(${COUNT})\\s+${WORDS}(?:of|out of)\\s+(?:the\\s+)?(${COUNT})\\b`, "i"));
+    if (best) return checked(countOf(best[2]) - countOf(best[1]));
+    const forms = [
+      `\\bdrop(?:s|ped|ping)?\\s+${WHOSE}(?:lowest|worst|bottom)(?:\\s+(${COUNT}))?\\b`,
+      `\\bdrop(?:s|ped|ping)?\\s+${WHOSE}(${COUNT})\\s+(?:lowest|worst)\\b`,
+      `\\b(?:lowest|worst|low)(?:\\s+(${COUNT}))?\\s+${WORDS}(?:(?:is|are|will be|gets?)\\s+)?dropped\\b`,
+      `(?<![\\d,.]\\s?)\\b(${COUNT})\\s+${WORDS}(?:(?:is|are|will be)\\s+)?dropped\\b`,
+    ];
+    const m = forms.map((f) => note.match(new RegExp(f, "i"))).find(Boolean);
+    // "the lowest grades will be dropped" says more than one but not how many.
+    if (m && !m[1] && /\b(?:grades|scores|marks)\b/i.test(m[0])) return null;
+    return m ? checked(countOf(m[1])) : null;
+  }
+  const checked = (n) => (Number.isInteger(n) && n >= 1 && n <= 20 ? n : null);
+
+  // A note from a category's own line or row sets its drop. One from a later sentence on the page goes
+  // to the latest category whose kind of work it names, and sets nothing if it names none: "Your lowest
+  // problem set will be dropped" is not about participation, nor "towards the final grade" about the final.
+  const workWordsOf = (t) =>
+    t
+      .toLowerCase()
+      .replace(/\b(?:final|course|overall)\s+(?:grade|mark|score)s?\b/g, " ")
+      .split(/[^a-z]+/)
+      .filter((w) => GRADED_WORK.test(w) || w === "hw")
+      .map(singularize);
+  function addNote(items, note, own = false) {
+    const said = new Set(workWordsOf(note));
+    const named = own ? items[0] : items.findLast((i) => workWordsOf(i.name).some((w) => said.has(w)));
+    const item = named ?? items[items.length - 1];
+    item.notes.push(note);
+    const drop = dropOf(note);
+    if (drop && named && !item.drop) item.drop = drop;
   }
 
   // Splits a sentence into one clause per category: "homework 40%, 2 midterms 15% each and final 30%",
@@ -339,7 +385,7 @@
     let title = null;
     const skip = (line, reason) => skipped.push({ text: line, reason });
     const noteOrSkip = (t, reason) => {
-      if (NOTE.test(t) && found.length) found[found.length - 1].notes.push(noteText(t));
+      if (NOTE.test(t) && found.length) addNote(found, noteText(t));
       else skip(t, reason);
     };
 
@@ -396,7 +442,7 @@
           if (fromTitle) item.fromTitle = true;
           if (guessed) item.guessed = true;
           if (weight.warning) item.warnings.push(weight.warning);
-          if (NOTE.test(clause)) item.notes.push(noteText(clause));
+          if (NOTE.test(clause)) addNote([item], noteText(clause), true);
           if (part && parent) {
             parent.parts.push({ name, weight: item.weight });
             continue;
@@ -588,6 +634,7 @@
       prev.weight += item.weight;
       prev.warnings.push("listed twice; weights added");
       prev.notes.push(...item.notes);
+      prev.drop ||= item.drop;
       prev.keywords.push(...item.keywords.filter((k) => !prev.keywords.includes(k)));
     }
     for (const item of merged) {
@@ -760,7 +807,7 @@
         if (c === nc || copied(r, c)) continue;
         if (c !== wc && wordCount(row[c]) > 15 && !NOTE_HEADER.test(header(c))) continue;
         const note = noteIn(raw(r, c));
-        if (note && !item.notes.includes(note)) item.notes.push(note);
+        if (note && !item.notes.includes(note)) addNote([item], note, true);
       }
       items.push(item);
     }
@@ -905,7 +952,7 @@
     return Number.isInteger(n) ? String(n) : String(Math.round(n * 100) / 100);
   }
 
-  const api = { parseSyllabus, parseGrid, singularize };
+  const api = { parseSyllabus, parseGrid, singularize, dropOf };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else globalThis.GradescopePlusSyllabus = api;
 })();

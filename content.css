@@ -310,6 +310,8 @@
 .gsnd-callout[hidden],
 .gsnd-banner[hidden],
 .gsnd-paste[hidden],
+.gsnd-step2[hidden],
+.gsnd-editorFooter[hidden],
 .gsnd-linkBtn[hidden] {
   display: none;
 }
@@ -321,7 +323,8 @@
   font-weight: 600;
 }
 
-.gsnd-modal textarea.gsnd-pasteBox {
+.gsnd-modal textarea.gsnd-pasteBox,
+.gsnd-modal textarea.gsnd-aiPrompt {
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -362,13 +365,35 @@
   overflow-wrap: anywhere;
 }
 
+/* Category | weight | assignments found, one line each; the list is clipped, with all of it on hover. */
+.gsnd-table.gsnd-pasteTable {
+  table-layout: fixed;
+}
+
+.gsnd-table.gsnd-pasteTable th:first-child {
+  width: 36%;
+}
+
+.gsnd-table.gsnd-pasteTable th:nth-child(2) {
+  width: 64px;
+}
+
 .gsnd-table.gsnd-pasteTable th:last-child {
   text-align: left;
 }
 
-.gsnd-pasteTable td:last-child {
+.gsnd-table .gsnd-pasteFound {
+  overflow: hidden;
   color: #444;
   font-size: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.gsnd-pasteSub {
+  margin: 2px 0 0 22px;
+  color: #666;
+  font-size: 12px;
 }
 
 .gsnd-table .gsnd-pasteNote td {
@@ -376,6 +401,23 @@
   border-top: 0;
   color: #8a5a00;
   font-size: 12px;
+}
+
+.gsnd-table .gsnd-pasteNote.gsnd-pasteAside td {
+  color: #666;
+}
+
+/* Gradescope restyles checkboxes; these are plain ones. */
+.gsnd-modal input[type="checkbox"] {
+  appearance: auto;
+  position: static;
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  opacity: 1;
+  visibility: visible;
+  accent-color: #5b2a86;
 }
 
 .gsnd-pasteCheck {
@@ -389,8 +431,8 @@
 
 .gsnd-pasteName {
   display: inline-flex;
-  gap: 6px;
-  align-items: baseline;
+  gap: 8px;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -418,11 +460,11 @@
   background: #bbb;
 }
 
-/* Category rows: name | matches | weight | counts by | remove */
+/* Category rows: name | matches | weight | drop lowest | counts by | remove */
 .gsnd-catHead,
 .gsnd-cat {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr) 76px 108px 24px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr) 76px 64px 108px 24px;
   align-items: center;
   gap: 8px;
 }
@@ -446,8 +488,26 @@
   gap: 3px;
 }
 
-.gsnd-weightInput input {
+.gsnd-weightInput input,
+.gsnd-modal input.gsnd-dropInput {
   text-align: right;
+}
+
+.gsnd-table tr.gsnd-missed td:first-child {
+  padding-left: 30px;
+}
+
+.gsnd-table tr.gsnd-missed td {
+  color: #8a5a00;
+}
+
+.gsnd-table tr.gsnd-dropped .gsnd-num {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.gsnd-aiHint {
+  margin: 0 0 8px;
 }
 
 .gsnd-row {
@@ -532,10 +592,12 @@
   }
 }
 
+/* Lines up with the rows' selects (180px, then the 36px "auto" column and its gap). */
 .gsnd-moveAll.gsnd-moveAll {
-  width: 140px;
-  height: 26px;
-  font-size: 13px;
+  flex: none;
+  width: 180px;
+  margin-right: 44px;
+  font-weight: 600;
 }
 
 .gsnd-assignRow {
@@ -596,10 +658,10 @@
   }
 
   .gsnd-cat {
-    grid-template-columns: minmax(0, 1fr) 76px 100px;
+    grid-template-columns: minmax(0, 1fr) 76px 56px 100px;
     grid-template-areas:
-      "name name remove"
-      "matches weight counts";
+      "name name name remove"
+      "matches weight drop counts";
   }
 
   .gsnd-cat > :nth-child(1) {
@@ -615,10 +677,14 @@
   }
 
   .gsnd-cat > :nth-child(4) {
-    grid-area: counts;
+    grid-area: drop;
   }
 
   .gsnd-cat > :nth-child(5) {
+    grid-area: counts;
+  }
+
+  .gsnd-cat > :nth-child(6) {
     grid-area: remove;
     justify-self: end;
   }
@@ -629,6 +695,6 @@
   }
 
   .gsnd-moveAll.gsnd-moveAll {
-    width: 110px;
+    width: 130px;
   }
 }
