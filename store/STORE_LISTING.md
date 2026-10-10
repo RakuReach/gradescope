@@ -36,6 +36,7 @@ Build with `scripts/package.sh`, then upload `dist/gradescope-plus-<version>.zip
   1. store/images/screenshot-1-countdown.png
   2. store/images/screenshot-2-grade.png
   3. store/images/screenshot-3-tiers.png
+  4. store/images/screenshot-4-weights.png
 - **Small promo tile (440×280):** store/images/promo-small-440x280.png
 - **Marquee promo tile (1400×560):** store/images/promo-marquee-1400x560.png
 

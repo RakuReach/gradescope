@@ -1,0 +1,68 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- The real extension (content.js, syllabus.js, content.css) on a mock dashboard with a fictional
+     course, opened to the syllabus paste preview. shot4.html frames it. -->
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="../../content.css">
+<style>
+  body { background: var(--page); }
+  .courseList { display: flex; gap: 24px; margin-bottom: 26px; }
+  .courseBox { position: relative; display: block; width: 354px; min-height: 196px; padding: 16px 16px 52px;
+    border: 1px solid #cfcfcf; border-radius: 6px; background: var(--card); color: var(--ink); text-decoration: none; }
+  .courseBox--shortname { margin: 0 0 4px; font-size: 18px; }
+  .courseBox--name { font-size: 15px; color: var(--muted); }
+  .courseBox--assignments { position: absolute; bottom: 12px; left: 16px; right: 16px; }
+  .gsnd-modal { max-height: 620px; }
+</style>
+<div class="dash">
+  <h2 class="pageHeading">Student Courses</h2>
+  <div class="courseList">
+    <a class="courseBox" href="/courses/520"><h3 class="courseBox--shortname">MATH 0520</h3><div class="courseBox--name">Linear Algebra</div><div class="courseBox--assignments">14 assignments</div></a>
+  </div>
+</div>
+<script>
+  const store = {};
+  window.chrome = {
+    runtime: { getURL: (p) => "../../" + p },
+    storage: {
+      local: {
+        get: async (k) => (k in store ? { [k]: store[k] } : {}),
+        set: async (o) => Object.assign(store, o),
+        remove: async (k) => delete store[k],
+      },
+      onChanged: { addListener() {} },
+    },
+  };
+  const row = (id, name, score, due) => `<tr><th><a href="/courses/520/assignments/${id}/submissions/${id}9">${name}</a></th><td>
+    <div class="submissionStatus--text">${score ? "" : "No Submission"}</div><div class="submissionStatus--score">${score || ""}</div>
+    <time class="submissionTimeChart--dueDate" datetime="${due}">Due</time></td></tr>`;
+  const graded = [
+    ["Homework 1", "10.0 / 10.0"], ["Homework 2", "9.0 / 10.0"], ["Homework 3", "6.0 / 10.0"], ["Homework 4", "9.5 / 10.0"],
+    ["Homework 5", "8.0 / 10.0"], ["Homework 6", "10.0 / 10.0"], ["Quiz 1", "17.0 / 20.0"], ["Quiz 2", "19.0 / 20.0"],
+    ["Quiz 3", "12.0 / 20.0"], ["Midterm Exam", "83.0 / 92.0"],
+  ];
+  const later = ["Homework 7", "Homework 8", "Quiz 4", "Final Exam"];
+  const page = `<table id="assignments-student-table"><tbody>${[
+    ...graded.map(([n, s], i) => row(i + 1, n, s, `2026-09-${String(i + 2).padStart(2, "0")} 20:00:00 -0400`)),
+    ...later.map((n, i) => row(i + 20, n, "", `2026-12-${String(i + 2).padStart(2, "0")} 20:00:00 -0500`)),
+  ].join("")}</tbody></table>`;
+  window.fetch = async () => ({ ok: true, text: async () => page });
+</script>
+<script src="../../syllabus.js"></script>
+<script src="../../content.js"></script>
+<script>
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+  const button = (text) => [...document.querySelectorAll(".gsnd-modal button")].find((b) => b.textContent === text);
+  (async () => {
+    await wait(400);
+    document.querySelector(".gsnd-gradeBtn").click();
+    button("Set category weights").click();
+    button("Paste from syllabus").click();
+    const box = document.querySelector(".gsnd-pasteBox");
+    box.value = "Grading\nHomework 30% (lowest two dropped)\nQuizzes 20%, lowest quiz dropped\nMidterm Exam 20%\nFinal Exam 30%";
+    box.dispatchEvent(new Event("input"));
+    box.blur();
+    await wait(800);
+    for (const node of document.querySelectorAll(".gsnd-overlay, .gsnd-overlay *")) node.scrollTop = node.scrollHeight;
+  })();
+</script>

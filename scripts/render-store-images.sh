@@ -29,5 +29,6 @@ render() { # <page> <width> <height> <output>
 render shot1.html 1280 800 store/images/screenshot-1-countdown.png
 render shot2.html 1280 800 store/images/screenshot-2-grade.png
 render shot3.html 1280 800 store/images/screenshot-3-tiers.png
+render shot4.html 1280 800 store/images/screenshot-4-weights.png
 render promo-small.html 440 280 store/images/promo-small-440x280.png
 render promo-marquee.html 1400 560 store/images/promo-marquee-1400x560.png
